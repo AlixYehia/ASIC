@@ -1,0 +1,172 @@
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+                 Version K-2015.06 for linux64 - May 28, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home/IC/.synopsys_dv_prefs.tcl
+########################## Design Compiler Library Files ###############################
+lappend search_path /home/IC/Labs/Ass_Syn_1.0/std_cells
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Ass_Syn_1.0/std_cells
+lappend search_path /home/IC/Labs/Ass_Syn_1.0/rtl
+. /opt/Synopsys/Synplify2015/libraries/syn /opt/Synopsys/Synplify2015/minpower/syn /opt/Synopsys/Synplify2015/dw/syn_ver /opt/Synopsys/Synplify2015/dw/sim_ver /home/IC/Labs/Ass_Syn_1.0/std_cells /home/IC/Labs/Ass_Syn_1.0/rtl
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+## Standard Cell libraries
+set target_library [list $TTLIB]
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+## Standard Cell & Hard Macros libraries
+set link_library [list * $TTLIB]
+* scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+######################### Reading RTL Files ##########################################
+read_file -format verilog Down_Counter.v
+Loading db file '/home/IC/Labs/Ass_Syn_1.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/gtech.db'
+Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
+  Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
+  Loading link library 'gtech'
+Loading verilog file '/home/IC/Labs/Ass_Syn_1.0/rtl/Down_Counter.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/IC/Labs/Ass_Syn_1.0/rtl/Down_Counter.v
+
+Inferred memory devices in process
+	in routine Down_Counter line 16 in file
+		'/home/IC/Labs/Ass_Syn_1.0/rtl/Down_Counter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     counter_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Current design is now '/home/IC/Labs/Ass_Syn_1.0/rtl/Down_Counter.db:Down_Counter'
+Loaded 1 design.
+Current design is 'Down_Counter'.
+Down_Counter
+link
+
+  Linking design 'Down_Counter'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  Down_Counter                /home/IC/Labs/Ass_Syn_1.0/rtl/Down_Counter.db
+  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/Labs/Ass_Syn_1.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+
+1
+######################### Mapping and optimization ##########################################
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'Down_Counter'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'Down_Counter' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'Down_Counter'
+  Mapping 'Down_Counter'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03     243.6      0.00       0.0       0.0                          
+    0:00:03     243.6      0.00       0.0       0.0                          
+    0:00:03     243.6      0.00       0.0       0.0                          
+    0:00:03     243.6      0.00       0.0       0.0                          
+    0:00:03     243.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+    0:00:03     210.6      0.00       0.0       0.0                          
+Loading db file '/home/IC/Labs/Ass_Syn_1.0/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+###################################################################
+# Write out Design after initial compile
+###################################################################
+#gives netlist
+write_file -format verilog -output Down_Counter_mapped.v   
+Writing verilog file '/home/IC/Labs/Ass_Syn_1.0/syn/Down_Counter_mapped.v'.
+1
+exit
+
+Memory usage for main task 166 Mbytes.
+Memory usage for this session 166 Mbytes.
+CPU usage for this session 9 seconds ( 0.00 hours ).
+
+Thank you...
