@@ -24,15 +24,6 @@ wire 			TX_OUT_tb;
 wire 			busy_tb;			
 
 
-///////////////////////////////////////////////////////////////
-//////////////////////// Variables ////////////////////////////
-///////////////////////////////////////////////////////////////
-
-//integer operation;
-reg 	[10:0]  expec_frame;
-reg 	[10:0]  gener_frame;
-integer 		i;
-
 
 ///////////////////////////////////////////////////////////////
 //////////////////////// Initial Block ////////////////////////
@@ -48,71 +39,22 @@ initial
  	initialize();
 
  	// Apply test cases
-
- 	/* Data Frame (in case of Parity is enabled & Parity Type is even) */
- 	@(negedge CLK_tb)
- 	P_DATA_tb = 8'b1111_0000;
- 	Data_Valid_tb = 1'b1;
- 	#(CLK_PERIOD) Data_Valid_tb = 1'b0;
- 	PAR_EN_tb = 1'b1;
- 	PAR_TYP_tb = 1'b0;
-
-	expec_frame = 11'b1_0_11110000_0;
-
- 	
- 	for (i=0; i<11; i=i+1)
- 	 begin
- 	 	@(posedge CLK_tb) gener_frame[i] = TX_OUT_tb;
- 	 end
- 	if (gener_frame == expec_frame)
- 	 	$display("TEST CASE of Enabled Even Parity Succeeded");
- 	else
- 		$display("TEST CASE of Enabled Even Parity Failed");
-
-
  	
 
- 	/* Data Frame (in case of Parity is enabled & Parity Type is odd) */
- 	@(negedge CLK_tb)
- 	P_DATA_tb = 8'b1111_0000;
- 	Data_Valid_tb = 1'b1;
- 	#(CLK_PERIOD) Data_Valid_tb = 1'b0;
- 	PAR_EN_tb = 1'b1;
- 	PAR_TYP_tb = 1'b1;
+ 	//              P_DATA      Data_Valid  PAR_EN  PAR_TYP      expec_frame               test_case_number and description
 
- 	expec_frame = 11'b1_1_11110000_0;
+ 	check_frame (8'b0111_1000,     1'b1,     1'b1,   1'b0,   11'b1_0_01111000_0,      1, "Parity is enabled & Parity Type is even = 0");
 
- 	
- 	for (i=0; i<11; i=i+1)
- 	 begin
- 	 	@(posedge CLK_tb) gener_frame[i] = TX_OUT_tb;
- 	 end
- 	if (gener_frame == expec_frame)
- 	 	$display("TEST CASE of Enabled Odd Parity Succeeded");
- 	else
- 		$display("TEST CASE of Enabled Odd Parity Failed");
+ 	check_frame (8'b0111_1100,     1'b1,     1'b1,   1'b0,   11'b1_1_01111100_0,      2, "Parity is enabled & Parity Type is even = 1");
+
+ 	check_frame (8'b0111_0000,     1'b1,     1'b1,   1'b1,   11'b1_0_01110000_0,      3, "Parity is enabled & Parity Type is odd = 0");
+
+ 	check_frame (8'b0111_1000,     1'b1,     1'b1,   1'b1,   11'b1_1_01111000_0,      4, "Parity is enabled & Parity Type is odd = 1");
+
+ 	check_frame (8'b0110_0000,     1'b1,     1'b0,   1'b0,   11'b1_1_01100000_0,      5, "Parity not enabled");
 
 
-
-  	/* Data Frame (in case of Parity is not enabled) */
-  	@(negedge CLK_tb)
- 	P_DATA_tb = 8'b1111_0000;
- 	Data_Valid_tb = 1'b1;
- 	#(CLK_PERIOD) Data_Valid_tb = 1'b0;
- 	PAR_EN_tb = 1'b0;
- 	PAR_TYP_tb = 1'b0;
-
- 	expec_frame = 11'b1_1_11110000_0;   // i dont care about MSB since that will be the defualt high of output
-
- 	
- 	for (i=0; i<11; i=i+1)
- 	 begin
- 	 	@(posedge CLK_tb) gener_frame[i] = TX_OUT_tb;
- 	 end
- 	if (gener_frame == expec_frame)
- 	 	$display("TEST CASE of Not Enabled Parity Succeeded");
- 	else
- 		$display("TEST CASE of Not Enabled Parity Failed");
+	
 
  	$stop;
 
@@ -152,6 +94,41 @@ task initialize;
 endtask
 
 
+//////////////////////// Check_frame //////////////////////////
+
+task check_frame;
+
+ input [7:0] P_DATA_task;
+ input Data_Valid_task;
+ input PAR_EN_task, PAR_TYP_task;
+ input [10:0] expec_frame;
+ input integer test_case_no;
+ input [511:0] test_case;
+ 
+ reg    [10:0]  gener_frame;
+ integer i;
+
+ begin
+ 	@(negedge CLK_tb)
+ 	P_DATA_tb = P_DATA_task;
+ 	PAR_EN_tb = PAR_EN_task;
+ 	PAR_TYP_tb = PAR_TYP_task;
+
+  	Data_Valid_tb = Data_Valid_task;
+ 	#(CLK_PERIOD) Data_Valid_tb = ~Data_Valid_task;
+ 	
+ 	for (i=0; i<11; i=i+1)
+ 	 begin
+ 	 	@(posedge CLK_tb) gener_frame[i] = TX_OUT_tb;
+ 	 end
+ 	if (gener_frame == expec_frame)
+ 	 	$display("TEST CASE %0d Passed: (%0s)", test_case_no, test_case);
+ 	else
+ 		$display("TEST CASE %0d Failed: (%0s) | expected: %b, Got: %b", test_case_no, test_case, expec_frame, gener_frame);
+ end
+
+endtask
+
 
 ///////////////////////////////////////////////////////////////
 //////////////////////// Clock Generation /////////////////////
@@ -175,7 +152,6 @@ UART_TX DUT (
 	.TX_OUT(TX_OUT_tb),
 	.busy(busy_tb)
 	);
-
 
 
 endmodule

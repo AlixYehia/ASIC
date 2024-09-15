@@ -8,7 +8,7 @@ module UART_TX_serializer (
 	output 	reg 			S_DATA
 	);
 
-reg 	[2:0] 	counter;
+reg 	[3:0] 	counter;
 reg 	[7:0]	parallel_data;  // 8-bit register
 
 
@@ -17,26 +17,30 @@ always@(posedge CLK or negedge RST)
     if(!RST)
         begin
             S_DATA <= 1'b1;
-            counter <= 3'b000;
+            counter <= 4'b000;
             ser_done <= 1'b0;  // Clear ser_done on reset
         end
     else if (Data_Valid)
         begin
             parallel_data <= P_DATA;
-            counter <= 3'b000;
+            counter <= 4'b000;
             ser_done <= 1'b0; 
         end
-    else if (ser_en && counter != 3'd7)
+    else if (ser_en && counter != 4'd8)
         begin
             {parallel_data[6:0], S_DATA} <= parallel_data;
             counter <= counter + 1'b1;
-            ser_done <= 1'b0;  
+            if (counter == 4'd7)
+             ser_done <= 1'b1;
+            else
+             ser_done <= 1'b0;  
         end
-    else if (counter == 3'd7)
+    else if (counter == 4'd8)
         begin
-            ser_done <= 1'b1;  // Set ser_done when all bits are serialized
+            ser_done <= 1'b0;  // Set ser_done when all bits are serialized
             counter <= 3'b000; // Reset counter after serialization
         end
+
  end
 
 

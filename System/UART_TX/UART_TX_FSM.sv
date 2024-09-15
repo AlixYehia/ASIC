@@ -102,13 +102,11 @@ always@(*)
  			     begin
  			     	next_state = IDLE;
  			     	busy = 1'b1;
- 					mux_sel_internal = stop_bit;
  			     end
  			    else
  			   	begin
  			     	next_state = START;
  			     	busy = 1'b1;
- 			    	mux_sel_internal = start_bit;	
  			   	end
  			   end
  	endcase
