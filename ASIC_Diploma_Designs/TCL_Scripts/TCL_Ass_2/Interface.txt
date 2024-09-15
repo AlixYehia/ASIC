@@ -1,0 +1,11 @@
+module Up_Dn_Counter (
+    input     [3:0]     IN,
+    input               Load,
+    input               UP,
+    input               DOWN,
+    input               CLK,
+    output              HIGH,
+    output    [3:0]     Counter,
+    output              Low
+    );
+
