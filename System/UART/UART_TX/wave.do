@@ -1,13 +1,8 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /UART_TX_tb/P_DATA_tb
-add wave -noupdate /UART_TX_tb/Data_Valid_tb
-add wave -noupdate /UART_TX_tb/PAR_TYP_tb
-add wave -noupdate /UART_TX_tb/PAR_EN_tb
-add wave -noupdate /UART_TX_tb/RST_tb
+add wave -noupdate -color Pink /UART_TX_tb/RST_tb
 add wave -noupdate /UART_TX_tb/CLK_tb
-add wave -noupdate /UART_TX_tb/TX_OUT_tb
-add wave -noupdate /UART_TX_tb/busy_tb
 add wave -noupdate -expand -group FSM -color Tan /UART_TX_tb/DUT/U0_FSM/Data_Valid
 add wave -noupdate -expand -group FSM /UART_TX_tb/DUT/U0_FSM/PAR_EN
 add wave -noupdate -expand -group FSM -color Gold /UART_TX_tb/DUT/U0_FSM/ser_done
@@ -28,8 +23,9 @@ add wave -noupdate -expand -group check_frame /UART_TX_tb/check_frame/gener_fram
 add wave -noupdate -expand -group parity /UART_TX_tb/DUT/U0_parity_Calc/P_DATA
 add wave -noupdate -expand -group parity /UART_TX_tb/DUT/U0_parity_Calc/PAR_TYP
 add wave -noupdate -expand -group parity /UART_TX_tb/DUT/U0_parity_Calc/par_bit
+add wave -noupdate -expand -group parity /UART_TX_tb/DUT/U0_parity_Calc/parallel_data
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {74458 ps} 0}
+WaveRestoreCursors {{Cursor 1} {11937 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 70
@@ -45,4 +41,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {127803 ps}
+WaveRestoreZoom {0 ps} {93169 ps}

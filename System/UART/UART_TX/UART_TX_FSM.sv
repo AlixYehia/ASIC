@@ -109,6 +109,9 @@ always@(*)
  			     	busy = 1'b1;
  			   	end
  			   end
+ 		default : begin
+ 				   next_state = IDLE;
+ 				  end
  	endcase
  end
 

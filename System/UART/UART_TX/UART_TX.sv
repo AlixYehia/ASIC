@@ -20,6 +20,7 @@ UART_TX_serializer U0_serializer (
 	.RST(RST),
 	.P_DATA(P_DATA),
 	.Data_Valid(Data_Valid),
+	.busy(busy),
 	.ser_done(ser_done),
 	.ser_en(ser_en),
 	.S_DATA(S_DATA)
@@ -37,7 +38,10 @@ UART_TX_FSM U0_FSM (
 	);
 
 UART_TX_parity_Calc U0_parity_Calc (
+	.CLK(CLK),
+	.RST(RST),
 	.Data_Valid(Data_Valid),
+	.busy(busy),
 	.P_DATA(P_DATA),
 	.PAR_TYP(PAR_TYP),
 	.par_bit(par_bit)
