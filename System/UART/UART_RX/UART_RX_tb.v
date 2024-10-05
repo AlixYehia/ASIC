@@ -157,7 +157,7 @@ endtask
 task initialize;
  begin
  	CLK_tb = 1'b0;
-  Prescale_tb = 6'd8;
+  Prescale_tb = 6'd8;    // must be initialized to avoid divison by zero or undefined value
   RX_IN_tb = 1'b1;
   PAR_EN_tb = 1'b0;
   PAR_TYP_tb = 1'b0;
