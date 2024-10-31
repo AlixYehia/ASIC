@@ -1,0 +1,291 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Sun Oct 20 03:19:27 2024
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+###################################################################
+########################### Variables #############################
+###################################################################
+################## Design Compiler Library Files #setup ######################
+puts "###########################################"
+###########################################
+puts "#      #setting Design Libraries           #"
+#      #setting Design Libraries           #
+puts "###########################################"
+###########################################
+#Add the path of the libraries to the search_path variable
+lappend search_path /home/IC/System/UART/UART_TX/std_cells
+/home/IC/System/UART/UART_TX/std_cells
+lappend search_path /home/IC/System/UART/UART_TX/rtl
+/home/IC/System/UART/UART_TX/std_cells /home/IC/System/UART/UART_TX/rtl
+lappend search_path /home/IC/System/UART/UART_TX/syn
+/home/IC/System/UART/UART_TX/std_cells /home/IC/System/UART/UART_TX/rtl /home/IC/System/UART/UART_TX/syn
+lappend search_path /home/IC/System/UART/UART_TX/dft
+/home/IC/System/UART/UART_TX/std_cells /home/IC/System/UART/UART_TX/rtl /home/IC/System/UART/UART_TX/syn /home/IC/System/UART/UART_TX/dft
+set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+###################################################################
+############################ Guidance #############################
+###################################################################
+# Synopsys setup variable
+set synopsys_auto_setup true
+true
+# Formality Setup File
+set_svf UART_TX.svf
+SVF set to '/home/IC/System/UART/UART_TX/syn/UART_TX.svf'.
+1
+###################################################################
+###################### Reference Container ########################
+###################################################################
+# Read Reference Design Verilog Files
+read_sverilog -container Ref UART_TX.sv
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/System/UART/UART_TX/rtl/UART_TX.sv'
+Created container 'Ref'
+Current container set to 'Ref'
+1
+read_sverilog -container Ref UART_TX_FSM.sv
+No target library specified, default is WORK
+Loading verilog file '/home/IC/System/UART/UART_TX/rtl/UART_TX_FSM.sv'
+1
+read_sverilog -container Ref UART_TX_MUX.sv
+No target library specified, default is WORK
+Loading verilog file '/home/IC/System/UART/UART_TX/rtl/UART_TX_MUX.sv'
+1
+read_sverilog -container Ref UART_TX_parity_Calc.sv
+No target library specified, default is WORK
+Loading verilog file '/home/IC/System/UART/UART_TX/rtl/UART_TX_parity_Calc.sv'
+1
+read_sverilog -container Ref UART_TX_serializer.sv
+No target library specified, default is WORK
+Loading verilog file '/home/IC/System/UART/UART_TX/rtl/UART_TX_serializer.sv'
+1
+read_verilog  -container Ref mux2X1.v
+No target library specified, default is WORK
+Loading verilog file '/home/IC/System/UART/UART_TX/rtl/mux2X1.v'
+1
+# Read Reference technology libraries
+read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+# set the top Reference Design 
+set_reference_design UART_TX
+Reference design set to 'Ref:/WORK/UART_TX'
+1
+set_top UART_TX
+Setting top design to 'Ref:/WORK/UART_TX'
+Status:   Elaborating design UART_TX   ...  
+Status:   Elaborating design mux2X1   ...  
+Status:   Elaborating design UART_TX_serializer   ...  
+Status:   Elaborating design UART_TX_FSM   ...  
+Status:   Elaborating design UART_TX_parity_Calc   ...  
+Status:   Elaborating design UART_TX_MUX   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/UART_TX'
+Reference design set to 'Ref:/WORK/UART_TX'
+1
+###################################################################
+#################### Implementation Container #####################
+###################################################################
+# Read Implementation Design Files
+read_verilog -container Imp -netlist UART_TX_dft.v
+No target library specified, default is WORK
+Loading verilog file '/home/IC/System/UART/UART_TX/dft/UART_TX_dft.v'
+Created container 'Imp'
+Current container set to 'Imp'
+1
+# Read Implementation technology libraries
+read_db -container Imp [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Loading db file '/home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+# set the top Implementation Design
+set_implementation_design UART_TX
+Implementation design set to 'Imp:/WORK/UART_TX'
+1
+set_top UART_TX
+Setting top design to 'Imp:/WORK/UART_TX'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/UART_TX'
+Implementation design set to 'Imp:/WORK/UART_TX'
+1
+########################## Don't verify ###########################
+# do not verify scan in & scan out ports as a compare point as it is existed only after synthesis and not existed in the RTL
+#scan in
+set_dont_verify_points -type port Ref:/WORK/*/SI
+Set don't verify point 'Ref:/WORK/UART_TX/SI'
+1
+set_dont_verify_points -type port Imp:/WORK/*/SI
+Set don't verify point 'Imp:/WORK/UART_TX/SI'
+1
+#scan_out
+set_dont_verify_points -type port Ref:/WORK/*/SO
+Set don't verify point 'Ref:/WORK/UART_TX/SO'
+1
+set_dont_verify_points -type port Imp:/WORK/*/SO
+Set don't verify point 'Imp:/WORK/UART_TX/SO'
+1
+############################### contants ##########################
+# all atpg enable (test_mode, scan_enable) are zero during formal compare
+#test_mode
+set_constant Ref:/WORK/*/test_mode 0
+Set 'Ref:/WORK/UART_TX/test_mode' to constant 0
+1
+set_constant Imp:/WORK/*/test_mode 0
+Set 'Imp:/WORK/UART_TX/test_mode' to constant 0
+1
+#scan_enable
+set_constant Ref:/WORK/*/SE 0
+Set 'Ref:/WORK/UART_TX/SE' to constant 0
+1
+set_constant Imp:/WORK/*/SE 0
+Set 'Imp:/WORK/UART_TX/SE' to constant 0
+1
+###################### Matching Compare points ####################
+match
+Reference design is 'Ref:/WORK/UART_TX'
+Implementation design is 'Imp:/WORK/UART_TX'
+Status:  Checking designs...
+    Warning: 1 (0) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          2          0          0          0          2
+mark                :          2          0          0          0          2
+transformation
+   map              :          1          0          0          0          1
+
+SVF files read:
+      /home/IC/System/UART/UART_TX/syn/UART_TX.svf
+
+SVF files produced:
+  /home/IC/System/UART/UART_TX/dft_fm/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 27 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 14 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+######################### Run Verification ########################
+set successful [verify]
+Reference design is 'Ref:/WORK/UART_TX'
+Implementation design is 'Imp:/WORK/UART_TX'
+    
+*********************************** Matching Results ***********************************    
+ 27 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 14 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/UART_TX
+ Implementation design: Imp:/WORK/UART_TX
+ 27 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0       2      25       0      27
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       1       0       0       1
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+########################### Reporting ############################# 
+report_passing_points > "passing_points.rpt"
+report_failing_points > "failing_points.rpt"
+report_aborted_points > "aborted_points.rpt"
+report_unverified_points > "unverified_points.rpt"
+start_gui
+     1  source -echo -verbose dft_fm_script.tcl
+1
+1
+fm_shell (verify)> 

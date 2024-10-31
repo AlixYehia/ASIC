@@ -1,0 +1,717 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vALU_16B
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+Z2 !s100 _G_>>oKQ2ELRU<FGXCnP[0
+Z3 I9<M<hYEmZl5inC;TlHHW90
+Z4 VS05@_ZK5MfdTk]59OAY1S2
+Z5 !s105 SYS_TOP_sv_unit
+S1
+Z6 dC:\Users\aliye\OneDrive\Desktop\Final_System\Final_System_RTL_Ali_Yehia\SYS_TOP
+Z7 w1729643913
+Z8 F../ALU/ALU_16B.v
+Z9 8SYS_TOP.sv
+Z10 FSYS_TOP.sv
+L0 7
+Z11 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z12 !s108 1730255112.784000
+Z13 !s107 ../ALU/ALU_16B.v|../CLKDIV_MUX/CLKDIV_MUX.v|../Clock_Gating/CLK_GATE.v|../DATA_SYNC/DATA_SYNC.v|../Integer_Clock_Divider/Integer_Clock_Divider.sv|../PULSE_GEN/PULSE_GEN.v|../Register_File/Register_File.v|../RST_SYNC/RST_SYNC.v|../SYS_CTRL/SYS_CTRL.sv|../ASYNC_FIFO/fifo_wr.v|../ASYNC_FIFO/fifo_rd.v|../ASYNC_FIFO/fifo_mem.v|../ASYNC_FIFO/BIT_SYNC.v|../ASYNC_FIFO/Async_fifo.v|../UART/UART_RX/UART_RX_strt_check.v|../UART/UART_RX/UART_RX_stop_check.v|../UART/UART_RX/UART_RX_parity_check.v|../UART/UART_RX/UART_RX_FSM.sv|../UART/UART_RX/UART_RX_edge_bit_counter.v|../UART/UART_RX/UART_RX_deserializer.v|../UART/UART_RX/UART_RX_data_sampling.v|../UART/UART_RX/UART_RX.v|../UART/UART_TX/UART_TX_serializer.sv|../UART/UART_TX/UART_TX_parity_Calc.sv|../UART/UART_TX/UART_TX_MUX.sv|../UART/UART_TX/UART_TX_FSM.sv|../UART/UART_TX/UART_TX.sv|../UART/UART/UART.v|SYS_TOP_tb.v|SYS_TOP.sv|
+Z14 !s90 -reportprogress|300|SYS_TOP.sv|SYS_TOP_tb.v|
+!s101 -O0
+o-O0
+Z15 n@a@l@u_16@b
+vAsync_fifo
+R1
+!i10b 1
+Z16 !s100 U?G6KBi@e7]6K9Ko`nbog3
+Z17 IGh0V_oM`ao7Y>IQek[5>_0
+Z18 V;n=VbRieNlcWlJITJj0lF3
+R5
+S1
+R6
+Z19 w1729632917
+Z20 F../ASYNC_FIFO/Async_fifo.v
+R9
+R10
+L0 2
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z21 n@async_fifo
+vBIT_SYNC
+R1
+!i10b 1
+Z22 !s100 lj=iFNaUn6fAl[Xo2n^?Y3
+Z23 I>4ASRZQC2eZ@PhUD;XVAc0
+Z24 VET;D?[RaoSQ05jLDQokl>2
+R5
+S1
+R6
+R19
+Z25 F../ASYNC_FIFO/BIT_SYNC.v
+R9
+R10
+L0 6
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z26 n@b@i@t_@s@y@n@c
+vCLK_GATE
+R1
+!i10b 1
+Z27 !s100 _ddWgZhE4PZZ0CM_:WcAP3
+Z28 Ihg:Fck@FUiXoenz1:YnA]0
+Z29 V[T_=n^K=eP74_D993nR=c3
+R5
+S1
+R6
+R19
+Z30 F../Clock_Gating/CLK_GATE.v
+R9
+R10
+L0 6
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z31 n@c@l@k_@g@a@t@e
+vCLKDIV_MUX
+R1
+!i10b 1
+Z32 !s100 @7e@n29i0[^]m[BdK_73D2
+Z33 Il^fP1l85^1Q:VSDATd>3z2
+Z34 V2R7_@ozW@ToFIBz8f?7Qm0
+R5
+S1
+R6
+R19
+Z35 F../CLKDIV_MUX/CLKDIV_MUX.v
+R9
+R10
+L0 2
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z36 n@c@l@k@d@i@v_@m@u@x
+vDATA_SYNC
+R1
+!i10b 1
+Z37 !s100 m3UmFND:ZcERVW_>=QEET3
+Z38 IdPKXPTmGa;3J=Nd?6Q?7Q0
+Z39 VAle95d70dLG94eba?Tg5D0
+R5
+S1
+R6
+R19
+Z40 F../DATA_SYNC/DATA_SYNC.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z41 n@d@a@t@a_@s@y@n@c
+vfifo_mem
+R1
+!i10b 1
+Z42 !s100 RHI2A;HEEd[E_9CJilmol2
+Z43 IH`[:9[@J=08eEJ:<493BM0
+Z44 V^a9UQzPGZ@C8blh_PJM>Q1
+R5
+S1
+R6
+R19
+Z45 F../ASYNC_FIFO/fifo_mem.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+vfifo_rd
+R1
+!i10b 1
+Z46 !s100 2EZ5baWB1B7oUOJU;U5z53
+Z47 IBaTnPi8;iH2a>Ifz?8n8<1
+Z48 V3eE>9;MLRG?f`i:JcnefG2
+R5
+S1
+R6
+R19
+Z49 F../ASYNC_FIFO/fifo_rd.v
+R9
+R10
+L0 9
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+vfifo_wr
+R1
+!i10b 1
+Z50 !s100 Al:IB5l8W=Ag>EaXbB=6M1
+Z51 I>eHPSNDAQRa6Q0iP9@]Z_2
+Z52 V9EPX0E:99?;b:RakV^j2Q3
+R5
+S1
+R6
+R19
+Z53 F../ASYNC_FIFO/fifo_wr.v
+R9
+R10
+L0 9
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+vInteger_Clock_Divider
+R1
+!i10b 1
+Z54 !s100 kLR?XzTQe5ObZ:m>6Nn3O2
+Z55 Iej1oRSgRjfdkdcI>OL=A>0
+Z56 VfK[;mQ1@ILA556PjM69_E0
+R5
+S1
+R6
+Z57 w1729661598
+Z58 F../Integer_Clock_Divider/Integer_Clock_Divider.sv
+R9
+R10
+L0 7
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z59 n@integer_@clock_@divider
+vPULSE_GEN
+R1
+!i10b 1
+Z60 !s100 h;[7DZ>TP;U1UY@OaZmQd2
+Z61 I<1TkobC]zjao8=S=QBkYd1
+Z62 VDlI9cmObXkSRQI;?RCcgV2
+R5
+S1
+R6
+R19
+Z63 F../PULSE_GEN/PULSE_GEN.v
+R9
+R10
+L0 6
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z64 n@p@u@l@s@e_@g@e@n
+vRegister_File
+R1
+!i10b 1
+Z65 !s100 DCzK0UfBa^o=T9ZkWd>HR2
+Z66 I?E>D0QQnbg:BMDCl6gE;e2
+Z67 VdzSl2AHWDdoSc;`_B2OU72
+R5
+S1
+R6
+Z68 w1729771763
+Z69 F../Register_File/Register_File.v
+R9
+R10
+L0 8
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z70 n@register_@file
+vRST_SYNC
+R1
+!i10b 1
+Z71 !s100 e32gm4CD;50:VA;Q18cSm1
+Z72 IT4FWFPIOn7UbkTDQhk8lQ1
+Z73 VIQ;:zgWZBaZk2XFz6QRUe0
+R5
+S1
+R6
+R19
+Z74 F../RST_SYNC/RST_SYNC.v
+R9
+R10
+L0 7
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z75 n@r@s@t_@s@y@n@c
+vSYS_CTRL
+R1
+!i10b 1
+Z76 !s100 TjJXkBJm45mNCOdFHbL2z0
+Z77 Io9`7G1nBc;NliGEIfcDK41
+Z78 VH8ngGQ8KJoXog=b1RKlUm3
+R5
+S1
+R6
+Z79 w1729662391
+Z80 F../SYS_CTRL/SYS_CTRL.sv
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z81 n@s@y@s_@c@t@r@l
+vSYS_TOP
+R1
+!i10b 1
+Z82 !s100 ORBTE<NC72RGLfBz1HZoz2
+Z83 IBYVT0BTI=FTH<IQSI4<MZ0
+Z84 V=[iCM]06Yi_og]c9_U:@H1
+R5
+S1
+R6
+R19
+R9
+R10
+L0 36
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z85 n@s@y@s_@t@o@p
+vSYS_TOP_tb
+!i10b 1
+Z86 !s100 E<86`Kn;Kn_lGZJWci?3W0
+Z87 ISh6]f3SAC37@Mg>eSl=K^1
+Z88 VlV]UIV919?U[fKgB@o=aj3
+R6
+Z89 w1730253476
+Z90 8SYS_TOP_tb.v
+Z91 FSYS_TOP_tb.v
+L0 3
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z92 n@s@y@s_@t@o@p_tb
+vUART
+R1
+!i10b 1
+Z93 !s100 WM52QAKGT5A`?DR:LG_EA2
+Z94 IhKVC]Q6=nfmDLV5NUUgYY2
+Z95 VM6n><9PH4E6i1C8g<B_Ih0
+R5
+S1
+R6
+Z96 w1729770261
+Z97 F../UART/UART/UART.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z98 n@u@a@r@t
+vUART_RX
+R1
+!i10b 1
+Z99 !s100 L0`AkYI_KD]k3oKD`la5P1
+Z100 Iz;Q9V2NVcYfXbNOe:Q9YI3
+Z101 V[AJ4d]VFo>zbL4zmPN3Zj3
+R5
+S1
+R6
+R19
+Z102 F../UART/UART_RX/UART_RX.v
+R9
+R10
+L0 7
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z103 n@u@a@r@t_@r@x
+vUART_RX_data_sampling
+R1
+!i10b 1
+Z104 !s100 fhK@FVjWh?5dnHkFJQ<[a2
+Z105 I=3Ij;a0VzME88OUbnNhD?2
+Z106 Vi40:K^Zmja=PIn5V2@50R0
+R5
+S1
+R6
+R19
+Z107 F../UART/UART_RX/UART_RX_data_sampling.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z108 n@u@a@r@t_@r@x_data_sampling
+vUART_RX_deserializer
+R1
+!i10b 1
+Z109 !s100 S5m][DE18:VG^R34P<A@j0
+Z110 IbZ8DCZe8k=>2UTo]>=S_@0
+Z111 V0^@Z7@VA[_mZ4HllVZ<b:3
+R5
+S1
+R6
+R19
+Z112 F../UART/UART_RX/UART_RX_deserializer.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z113 n@u@a@r@t_@r@x_deserializer
+vUART_RX_edge_bit_counter
+R1
+!i10b 1
+Z114 !s100 l<iI[6b8=ZZ]iAcS2YZj@1
+Z115 I5j4jETW^@W:ViaiVl:M;H2
+Z116 VjCOcT[FaOTneb;7;jNc>S3
+R5
+S1
+R6
+R19
+Z117 F../UART/UART_RX/UART_RX_edge_bit_counter.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z118 n@u@a@r@t_@r@x_edge_bit_counter
+vUART_RX_FSM
+R1
+!i10b 1
+Z119 !s100 n8YIm[l`Bc:LS?DlKQ:1E3
+Z120 IL2@ZUgK?`=QBWnj<mKjLH1
+Z121 V2<M2D[I7g6dm:n?8O27`V0
+R5
+S1
+R6
+R19
+Z122 F../UART/UART_RX/UART_RX_FSM.sv
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z123 n@u@a@r@t_@r@x_@f@s@m
+vUART_RX_parity_check
+R1
+!i10b 1
+Z124 !s100 blj<S18JS;4`XX>kWYY1U3
+Z125 I_;a6]1leNA7NiBIJznE<M3
+Z126 V8Ib9h>EZ]5T6R][b]j@?_2
+R5
+S1
+R6
+R19
+Z127 F../UART/UART_RX/UART_RX_parity_check.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z128 n@u@a@r@t_@r@x_parity_check
+vUART_RX_stop_check
+R1
+!i10b 1
+Z129 !s100 B`H1k_ECPKZ3PZX<B3JJL1
+Z130 IQ<gCF6PQ=SJWkQW8ic>=U2
+Z131 V<76lnW8`F4hCG62hAiK=c1
+R5
+S1
+R6
+R19
+Z132 F../UART/UART_RX/UART_RX_stop_check.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z133 n@u@a@r@t_@r@x_stop_check
+vUART_RX_strt_check
+R1
+!i10b 1
+Z134 !s100 AK1WnO5@W_F5aGJh88XmQ2
+Z135 IX`YS4>@]65[35^EQI869F0
+Z136 V?OOFUMzPahh6UMB<M6efd2
+R5
+S1
+R6
+R19
+Z137 F../UART/UART_RX/UART_RX_strt_check.v
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z138 n@u@a@r@t_@r@x_strt_check
+vUART_TX
+R1
+!i10b 1
+Z139 !s100 6?dNU3[o7UO1[FC>^38EG2
+Z140 I0ISLfT=JC5VXHb`bF?GFO1
+Z141 Vl?GE>Ue?YN>CWDPizBJ8V1
+R5
+S1
+R6
+R19
+Z142 F../UART/UART_TX/UART_TX.sv
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z143 n@u@a@r@t_@t@x
+vUART_TX_FSM
+R1
+!i10b 1
+Z144 !s100 ZGzd><_hRdDVM2no:1:mP1
+Z145 I2mmW0W4=eCj`oC_R=bhRN3
+Z146 V8g<mmX1CZ`N^DdiM[aA[k2
+R5
+S1
+R6
+Z147 w1729656214
+Z148 F../UART/UART_TX/UART_TX_FSM.sv
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z149 n@u@a@r@t_@t@x_@f@s@m
+vUART_TX_MUX
+R1
+!i10b 1
+Z150 !s100 HjnY>=`Vh]6SRW[5fAIg:2
+Z151 INNT`;JXMoOU30o>J[gQ]12
+Z152 V_dVQlYdZ_A2TX=i9edh822
+R5
+S1
+R6
+R19
+Z153 F../UART/UART_TX/UART_TX_MUX.sv
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z154 n@u@a@r@t_@t@x_@m@u@x
+vUART_TX_parity_Calc
+R1
+!i10b 1
+Z155 !s100 6Fe>Z]<Ubj4i6WU`ALNg20
+Z156 I<JimLb8CnU5fJ::UA>2Ci3
+Z157 V>Qihc9TT>m:L91L3gU0_`3
+R5
+S1
+R6
+R19
+Z158 F../UART/UART_TX/UART_TX_parity_Calc.sv
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z159 n@u@a@r@t_@t@x_parity_@calc
+vUART_TX_serializer
+R1
+!i10b 1
+Z160 !s100 WnHQ2JUo6[HGh6XR^A`IE1
+Z161 IaI3AVbaM7=KVJ:@VBnBU=3
+Z162 ViDXW2IAT@WNPPh3D`j@Vb3
+R5
+S1
+R6
+R19
+Z163 F../UART/UART_TX/UART_TX_serializer.sv
+R9
+R10
+L0 1
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+o-O0
+Z164 n@u@a@r@t_@t@x_serializer

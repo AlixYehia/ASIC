@@ -1,0 +1,1 @@
+vsim -sdfmax /DUT=SYS_TOP.sdf -t ns -voptargs="+acc" work.SYS_TOP_TB -sdfnoerror

@@ -1,0 +1,43 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////// Blocking and Non-Blocking /////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+In Testbench when you use blocking assignment (=) to check for a signal at the posedge of the clock, if I may say so, it will be treated as combinational and take the value exactly at the edge while if used Non-Blocking assignment (<=) it will take the value just before the posedge of clock which is our intended case. This can be seen in my Asynchronous FIFO testbench in expected value generation in read_process task. Try to change the Non-blocking to Blocking and examine the result on waveform and transcript.
+
+In summary:
+
+Follow the same rules to avoid simulation race if you are *----generating----* an expected output and comparing it as for my case @edge of a clock for a signal that is updated sequentially
+
+1- * If you model combinational logic use blocking assignments *
+2- * If you model sequential logic use non-blocking assignments *
+3- if both use non-blocking assignments
+4- Don't mix blocking and non-blocking assignments in the same always block
+5- Don't make assignments to the same variable within more than one always block
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////// Timing Precision /////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Let's assume TX_CLK_PERIOD = 8680.555. When you divide this by Prescale_tb and then by 2, if the result has too many decimal points, the simulator may round the result in a way that introduces timing errors. For instance, if the expected period for a clock signal is slightly different due to rounding, it can cause a mismatch in when certain events occur.
+
+With 3 decimals:
+
+TX_CLK_PERIOD = 8680.555;
+#((8680.555 / 8) / 2) = 542.531875;
+
+The resulting delay would be rounded to the nearest time unit in your simulator, based on its internal precision settings. In this case, rounding to 542.532 (approximately).
+
+With 4 decimals:
+
+TX_CLK_PERIOD = 8680.5551;
+#((8680.5551 / 8) / 2) = 542.53188125;
+
+Now the result would be slightly different due to the extra precision, leading to potential mismatches in the clock and data timing.
+
+This rounding can lead to slight shifts in clock edges and cause signals like data_valid_tb to never assert properly since the timings no longer align.
+
+
+Conclusion:
+
+The simulation hangs searching for the edge when you increase the precision of TX_CLK_PERIOD because the division results in values that the simulator rounds differently, causing timing mismatches. Stick to 3 decimal places or fewer for TX_CLK_PERIOD, and ensure that your #delays and timescale precision settings are properly aligned with your simulation needs.

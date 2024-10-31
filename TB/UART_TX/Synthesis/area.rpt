@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : UART_TX
+Version: K-2015.06
+Date   : Tue Oct  1 03:36:55 2024
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                           58
+Number of nets:                           155
+Number of cells:                           98
+Number of combinational cells:             69
+Number of sequential cells:                25
+Number of macros/black boxes:               0
+Number of buf/inv:                          9
+Number of references:                       4
+
+Combinational area:                580.113108
+Buf/Inv area:                       48.244701
+Noncombinational area:             660.128698
+Macro/Black Box area:                0.000000
+Net Interconnect area:           38920.196960
+
+Total cell area:                  1240.241806
+Total area:                      40160.438767
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  -------------------
+UART_TX                           1240.2418    100.0    0.0000     0.0000  0.0000  UART_TX
+U0_FSM                             188.2720     15.2  107.0797    81.1923  0.0000  UART_TX_FSM
+U0_MUX                              27.0641      2.2   27.0641     0.0000  0.0000  UART_TX_MUX
+U0_parity_Calc                     403.6081     32.5  196.5089   207.0992  0.0000  UART_TX_parity_Calc
+U0_serializer                      621.2976     50.1  249.4604   371.8372  0.0000  UART_TX_serializer
+--------------------------------  ---------  -------  --------  ---------  ------  -------------------
+Total                                                 580.1131   660.1287  0.0000
+
+1

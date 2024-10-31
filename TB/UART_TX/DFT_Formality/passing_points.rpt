@@ -1,0 +1,117 @@
+**************************************************
+Report         : passing_points
+
+Reference      : Ref:/WORK/UART_TX
+Implementation : Imp:/WORK/UART_TX
+Version        : L-2016.03-SP1
+Date           : Sun Oct 20 03:19:32 2024
+**************************************************
+
+27 Passing compare points:
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_FSM/current_state_reg[0]
+  Impl DFF        Imp:/WORK/UART_TX/U0_FSM/current_state_reg[0]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_FSM/current_state_reg[1]
+  Impl DFF        Imp:/WORK/UART_TX/U0_FSM/current_state_reg[1]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_FSM/current_state_reg[2]
+  Impl DFF        Imp:/WORK/UART_TX/U0_FSM/current_state_reg[2]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[0]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[0]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[1]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[1]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[2]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[2]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[3]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[3]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[4]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[4]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[5]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[5]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[6]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[6]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[7]
+  Impl DFF        Imp:/WORK/UART_TX/U0_parity_Calc/parallel_data_reg[7]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/S_DATA_reg
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/S_DATA_reg
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/counter_reg[0]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/counter_reg[0]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/counter_reg[1]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/counter_reg[1]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/counter_reg[2]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/counter_reg[2]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/counter_reg[3]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/counter_reg[3]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[0]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[0]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[1]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[1]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[2]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[2]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[3]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[3]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[4]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[4]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[5]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[5]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[6]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[6]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/parallel_data_reg[7]
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/parallel_data_reg[7]
+
+  Ref  DFF        Ref:/WORK/UART_TX/U0_serializer/ser_done_reg
+  Impl DFF        Imp:/WORK/UART_TX/U0_serializer/ser_done_reg
+
+  Ref  Port       Ref:/WORK/UART_TX/TX_OUT
+  Impl Port       Imp:/WORK/UART_TX/TX_OUT
+
+  Ref  Port       Ref:/WORK/UART_TX/busy
+  Impl Port       Imp:/WORK/UART_TX/busy
+
+ [BBNet: multiply-driven net
+  BBPin: black-box pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1

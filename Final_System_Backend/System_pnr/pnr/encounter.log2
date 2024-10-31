@@ -1,0 +1,478 @@
+Checking out Encounter license ...
+SOC_Encounter_GXL 8.1 license checkout succeeded.
+This Encounter release has been compiled with OA version 22.04-p032.
+sourcing /usr/Cadence/SOC/etc/fe/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2008.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CPE v08.10-p009
+--- Starting "First Encounter v08.10-p004_1" on Tue Oct 29 21:38:00 2024 (mem=62.2M) ---
+--- Running on localhost.localdomain (x86_64 w/Linux 2.6.32-431.29.2.el6.x86_64) ---
+This version was compiled on Tue Nov 4 14:34:21 PST 2008.
+Set DBUPerIGU to 1000.
+Set Default Mode Total Cap Scale Factor to 1.00
+Set Detail Mode Total Cap Scale Factor to 1.00
+Set Coupling Total Cap Scale Factor to 1.00
+Set Total Res Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+Reading config file - /home/ahesham/Projects/System_pnr/pnr/SYS_TOP_chip.enc.dat/SYS_TOP.conf
+*** End library_loading (cpu=0.38min, mem=90.8M, fe_cpu=0.50min, fe_mem=280.4M) ***
+**ERROR: (SOCCTE-29):	**ERROR: Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/pnr/../DFT/sdc/SYS_TOP.sdc".
+Reasonfor error: No such file or directory
+**ERROR: (SOCSYT-16027):	Failed to read timing constraint file /home/ahesham/Projects/System_pnr/pnr/../DFT/sdc/SYS_TOP.sdc
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/pnr/../DFT/sdc/SYS_TOP.sdc".
+Loading preference file /home/ahesham/Projects/System_pnr/pnr/SYS_TOP_chip.enc.dat/enc.pref.tcl ...
+#WARNING (NRIF-64) When droutePostRouteSwapVia is NOT set to 'false' or 'none', the tool just does post route via optimization and it will NOT do normal routing.
+loading place ...
+loading route ...
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setDrawView fplan
+<CMD> setDrawView place
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD_INTERNAL> uiSetTool obstruct
+<CMD_INTERNAL> uiSetTool select
+<CMD> zoomBox 249.156 164.233 216.904 147.929
+<CMD_INTERNAL> uiSetTool obstruct
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> createObstruct 0.475 156.751 240.013 159.969
+<CMD_INTERNAL> uiSetTool move
+<CMD> selectObstruct 0.4100 156.2100 239.8500 159.0800 defObstructName
+<CMD> setObjFPlanBox LayerShape (820,312420,479700,318160) 0.4915 157.0265 239.9315 159.8965
+<CMD> deselectAll
+<CMD> selectWire 2.3000 157.0900 238.0650 158.0900 5 VSS
+<CMD> deselectAll
+<CMD> selectObstruct 0.4100 156.2100 239.8500 159.0800 defObstructName
+<CMD> setObjFPlanBox LayerShape (820,312420,479700,318160) 0.4265 156.9285 239.8665 159.7985
+<CMD> setObjFPlanBox LayerShape (820,312420,479700,318160) 0.459 157.0105 239.899 159.8805
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> setObjFPlanBox LayerShape (820,312420,479700,318160) 0.573 157.0435 240.013 159.9135
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD_INTERNAL> uiSetTool select
+<CMD> zoomBox 241.386 160.198 230.588 152.438
+<CMD> zoomBox 241.924 158.659 233.448 155.221
+<CMD> deselectAll
+<CMD> zoomBox 248.732 -4.133 196.024 14.616
+<CMD> zoomBox 243.474 -1.744 242.280 -0.906
+<CMD> zoomBox 244.133 -3.248 207.167 14.439
+<CMD_INTERNAL> uiSetTool obstruct
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> panPage 1 0
+<CMD> createObstruct 0.556 0.536 239.965 3.635
+<CMD_INTERNAL> uiSetTool select
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> zoomBox 245.901 165.310 186.296 126.752
+<CMD> zoomBox 243.665 162.567 232.577 155.188
+<CMD> zoomBox 244.663 164.072 185.235 136.480
+
+*** Memory Usage v0.144 (Current mem = 293.410M, initial mem = 62.238M) ***
+--- Ending "First Encounter" (totcpu=0:04:55, real=0:45:37, mem=293.4M) ---

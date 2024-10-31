@@ -1,0 +1,141 @@
+
+// ************************************************************* //
+// Author : Ali Yehia Abdelmonem
+// Date   : 2024-9-18
+// ************************************************************* //
+
+`timescale 1ns/1ps
+
+module Integer_Clock_Divider_tb ();
+
+
+///////////////////////////////////////////////////////////////
+//////////////////////// Parameters ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+parameter CLK_PERIOD = 10;  // Clock period for 100 Mhz frequency
+
+
+///////////////////////////////////////////////////////////////
+//////////////////////// DUT Signals //////////////////////////
+///////////////////////////////////////////////////////////////
+
+reg 	 		i_ref_clk_tb;
+reg 			i_rst_n_tb;
+reg				i_clk_en_tb;
+reg		[7:0]	i_div_ratio_tb;
+wire 			o_div_clk_tb;			
+
+
+///////////////////////////////////////////////////////////////
+//////////////////////// Initial Block ////////////////////////
+///////////////////////////////////////////////////////////////
+
+initial 
+ begin
+ 	// System functions
+ 	$dumpfile("Integer_Clock_Divider.vcd");
+ 	$dumpvars;
+
+ 	// Initialize the signals
+ 	initialize();
+
+ 	// Apply test cases
+ 	
+
+ 	//      i_clk_en      i_div_ratio 
+
+ 	check_clock (1'b1,     8'd0);
+
+ 	check_clock (1'b1,     8'd1);
+
+ 	check_clock (1'b1,     8'd2); 	
+
+ 	check_clock (1'b1,     8'd3);
+
+ 	check_clock (1'b1,     8'd4);
+
+ 	check_clock (1'b1,     8'd5);
+
+ 	check_clock (1'b1,     8'd6);
+
+ 	check_clock (1'b1,     8'd7);
+
+ 	check_clock (1'b0,     8'd8);
+
+
+ 	$stop;
+
+ end
+
+
+///////////////////////////////////////////////////////////////
+/////////////////////////// Tasks /////////////////////////////
+///////////////////////////////////////////////////////////////
+
+
+
+//////////////////////// Reset ///////////////////////////////
+
+task reset;
+ begin
+ 	i_rst_n_tb = 1'b1;
+ 	#(CLK_PERIOD)
+ 	i_rst_n_tb = 1'b0;
+ 	#(CLK_PERIOD)
+ 	i_rst_n_tb = 1'b1;
+ end
+endtask
+
+
+//////////////////////// initialize //////////////////////////
+
+task initialize;
+ begin
+ 	i_ref_clk_tb = 1'b0;
+ 	reset();
+	i_clk_en_tb = 1'b0;
+	i_div_ratio_tb = 1'b0;
+ end
+endtask
+
+
+//////////////////////// Check_frame //////////////////////////
+
+task check_clock;
+
+ input 			i_clk_en_task;
+ input [7:0]	i_div_ratio_task;
+
+ begin
+ 	@(negedge i_ref_clk_tb)
+ 	i_clk_en_tb = i_clk_en_task;
+ 	i_div_ratio_tb = i_div_ratio_task;
+ 	#(20*CLK_PERIOD); 
+ end
+
+endtask
+
+
+///////////////////////////////////////////////////////////////
+//////////////////////// Clock Generation /////////////////////
+///////////////////////////////////////////////////////////////
+
+ 
+ always #(CLK_PERIOD/2) i_ref_clk_tb = ~i_ref_clk_tb; 
+
+
+///////////////////////////////////////////////////////////////
+//////////////////////// DUT Instantiation ////////////////////
+///////////////////////////////////////////////////////////////
+
+Integer_Clock_Divider DUT (
+	.i_ref_clk(i_ref_clk_tb),
+	.i_rst_n(i_rst_n_tb),
+	.i_clk_en(i_clk_en_tb),
+	.i_div_ratio(i_div_ratio_tb),
+	.o_div_clk(o_div_clk_tb)
+	);
+
+
+endmodule

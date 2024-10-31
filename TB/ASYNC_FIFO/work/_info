@@ -1,0 +1,150 @@
+m255
+K3
+z0
+!s99 nomlopt
+!s11f MIXED_VERSIONS
+13
+cModel Technology
+dC:\altera\13.0sp1
+T_opt
+Z0 !s110 1730244190
+V6eU6K_6SZf?DkzJ`JeIHd1
+04 13 4 work ASYNC_FIFO_tb fast 0
+=1-703217b593d4-67216e5e-27c-5484
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vASYNC_FIFO
+R0
+!i10b 1
+!s100 RG_LjofWNR;WeB8dbnoLz0
+INVd_^HMjUR`jSEe[afJPn2
+Z2 dD:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO
+w1730193895
+8ASNYC_FIFO.v
+FASNYC_FIFO.v
+!i122 0
+L0 1 70
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z5 !s108 1730244190.000000
+Z6 !s107 FIFO_WR.v|FIFO_RD.v|FIFO_MEM_CNTRL.v|DF_SYNC.v|ASYNC_FIFO_tb.v|ASNYC_FIFO.v|
+Z7 !s90 -reportprogress|300|ASNYC_FIFO.v|ASYNC_FIFO_tb.v|DF_SYNC.v|FIFO_MEM_CNTRL.v|FIFO_RD.v|FIFO_WR.v|
+!i113 0
+R1
+n@a@s@y@n@c_@f@i@f@o
+vASYNC_FIFO_tb
+R0
+!i10b 1
+!s100 H0`4A=aHdW1boL;n2aUlh2
+IC;UgZO8PdU6:<5[H9T75f3
+R2
+w1730212825
+8ASYNC_FIFO_tb.v
+FASYNC_FIFO_tb.v
+!i122 0
+L0 3 202
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R1
+n@a@s@y@n@c_@f@i@f@o_tb
+vDF_SYNC
+R0
+!i10b 1
+!s100 >93ZW]zk_66O6UzUb2z=f2
+IZ@c_ML[lTSf=X@g^m7J6O1
+R2
+w1730193346
+8DF_SYNC.v
+FDF_SYNC.v
+!i122 0
+L0 1 42
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R1
+n@d@f_@s@y@n@c
+vFIFO_MEM_CNTRL
+R0
+!i10b 1
+!s100 QSah4jnSoNQ4C3^9X>:j_0
+I3CFA85Qc7=BLRG>i;;N8[1
+R2
+w1730234058
+8FIFO_MEM_CNTRL.v
+FFIFO_MEM_CNTRL.v
+!i122 0
+L0 1 44
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R1
+n@f@i@f@o_@m@e@m_@c@n@t@r@l
+vFIFO_RD
+R0
+!i10b 1
+!s100 281bYhAhziCedc`G1?Ok;1
+I_8NJ_UDT[jNkZfTd?o24Y3
+R2
+w1730194132
+8FIFO_RD.v
+FFIFO_RD.v
+!i122 0
+L0 1 64
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R1
+n@f@i@f@o_@r@d
+vFIFO_WR
+R0
+!i10b 1
+!s100 zmT;Uc0XARV=go;kb:B<P3
+I`VUTQ8GKdMfj=5Eh4@hah3
+R2
+w1730206334
+8FIFO_WR.v
+FFIFO_WR.v
+!i122 0
+L0 1 63
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R1
+n@f@i@f@o_@w@r

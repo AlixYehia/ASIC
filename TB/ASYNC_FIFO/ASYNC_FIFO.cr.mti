@@ -1,0 +1,38 @@
+{D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/FIFO_MEM_CNTRL.v} {1 {vlog -work work {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/FIFO_MEM_CNTRL.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module FIFO_MEM_CNTRL
+
+Top level modules:
+	FIFO_MEM_CNTRL
+
+} {} {}} {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASNYC_FIFO.v} {1 {vlog -work work {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASNYC_FIFO.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ASYNC_FIFO
+
+Top level modules:
+	ASYNC_FIFO
+
+} {} {}} {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/FIFO_RD.v} {1 {vlog -work work {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/FIFO_RD.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module FIFO_RD
+
+Top level modules:
+	FIFO_RD
+
+} {} {}} {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASYNC_FIFO_tb.v} {0 {vlog -work work {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASYNC_FIFO_tb.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ASYNC_FIFO_tb
+** Error: D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASYNC_FIFO_tb.v(163): near "else": syntax error, unexpected else
+** Error: D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASYNC_FIFO_tb.v(168): near "else": syntax error, unexpected else
+** Error: D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASYNC_FIFO_tb.v(174): near "end": syntax error, unexpected end
+** Error: D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/ASYNC_FIFO_tb.v(193): (vlog-2730) Undefined variable: 'ASYNC_FIFO'.
+
+
+} {4.0 8.0} {}} {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/DF_SYNC.v} {1 {vlog -work work {D:/Digital IC/IC Temsah/my homework/ASIC_Diploma_Designs/System/ASYNC_FIFO/DF_SYNC.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module DF_SYNC
+
+Top level modules:
+	DF_SYNC
+
+} {} {}}

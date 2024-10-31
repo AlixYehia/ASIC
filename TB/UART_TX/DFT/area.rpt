@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : area
+Design : UART_TX
+Version: K-2015.06
+Date   : Sun Oct 20 03:17:13 2024
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                           80
+Number of nets:                           216
+Number of cells:                          144
+Number of combinational cells:            113
+Number of sequential cells:                25
+Number of macros/black boxes:               0
+Number of buf/inv:                         51
+Number of references:                       8
+
+Combinational area:                923.709509
+Buf/Inv area:                      361.246901
+Noncombinational area:             827.220127
+Macro/Black Box area:                0.000000
+Net Interconnect area:           52780.266418
+
+Total cell area:                  1750.929636
+Total area:                      54531.196054
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  --------------------------
+UART_TX                           1750.9296    100.0   48.2447     0.0000  0.0000  UART_TX
+U0_FSM                             261.2274     14.9  162.3846    98.8428  0.0000  UART_TX_FSM_test_1
+U0_MUX                              27.0641      1.5   27.0641     0.0000  0.0000  UART_TX_MUX
+U0_mux2X1                           15.2971      0.9   15.2971     0.0000  0.0000  mux2X1_0
+U0_parity_Calc                     516.5713     29.5  252.9905   263.5808  0.0000  UART_TX_parity_Calc_test_1
+U0_serializer                      867.2279     49.5  402.4314   464.7965  0.0000  UART_TX_serializer_test_1
+U1_mux2X1                           15.2971      0.9   15.2971     0.0000  0.0000  mux2X1_1
+--------------------------------  ---------  -------  --------  ---------  ------  --------------------------
+Total                                                 923.7095   827.2201  0.0000
+
+1

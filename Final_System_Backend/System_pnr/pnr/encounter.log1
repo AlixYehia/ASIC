@@ -1,0 +1,3978 @@
+Checking out Encounter license ...
+SOC_Encounter_GXL 8.1 license checkout succeeded.
+This Encounter release has been compiled with OA version 22.04-p032.
+sourcing /usr/Cadence/SOC/etc/fe/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2008.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CPE v08.10-p009
+--- Starting "First Encounter v08.10-p004_1" on Tue Oct 29 19:23:27 2024 (mem=62.2M) ---
+--- Running on localhost.localdomain (x86_64 w/Linux 2.6.32-431.29.2.el6.x86_64) ---
+This version was compiled on Tue Nov 4 14:34:21 PST 2008.
+Set DBUPerIGU to 1000.
+Set Default Mode Total Cap Scale Factor to 1.00
+Set Detail Mode Total Cap Scale Factor to 1.00
+Set Coupling Total Cap Scale Factor to 1.00
+Set Total Res Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD_INTERNAL> setUIVar rda_Input ui_topcell SYS_TOP
+<CMD_INTERNAL> setUIVar rda_Input ui_netlist /home/ahesham/Projects/System_pnr/DFT/netlists/SYS_TOP.v
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,min /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib,max /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_timelib /home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+<CMD_INTERNAL> setUIVar rda_Input ui_leffile {/home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13fsg_7lm_tech.lef /home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13_m_macros.lef}
+<CMD_INTERNAL> setUIVar rda_Input ui_captbl_file /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl
+<CMD_INTERNAL> setUIVar rda_Input ui_timingcon_file /home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc
+<CMD_INTERNAL> setUIVar rda_Input ui_pwrnet VDD
+<CMD_INTERNAL> setUIVar rda_Input ui_gndnet VSS
+<CMD> commitConfig
+
+Loading Lef file /home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13fsg_7lm_tech.lef...
+
+Loading Lef file /home/ahesham/Projects/System_pnr/std_cells/lef/tsmc13_m_macros.lef...
+Set DBUPerIGU to M2 pitch 820.
+Initializing default via types and wire widths ...
+
+Power Planner/ViaGen version 8.1.45 promoted on 09/01/2008.
+viaInitial starts at Tue Oct 29 19:23:35 2024
+viaInitial ends at Tue Oct 29 19:23:35 2024
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/home/ahesham/Projects/System_pnr/DFT/netlists/SYS_TOP.v'
+Inserting temporary buffers to remove assignment statements.
+
+*** Memory Usage v0.144 (Current mem = 188.973M, initial mem = 62.238M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=189.0M) ***
+Set top cell to SYS_TOP.
+Reading max timing library '/home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' 
+Reading min timing library '/home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' 
+Reading max timing library '/home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+Reading min timing library '/home/ahesham/Projects/System_pnr/std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib' ...
+No function defined for cell 'HOLDX1M'. The cell will only be used for analysis.
+ read 618 cells in library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c' 
+*** End library_loading (cpu=0.35min, mem=90.9M, fe_cpu=0.44min, fe_mem=279.8M) ***
+Starting recursive module instantiation check.
+No recursion found.
+*****NEW dbFlattenCell is used.
+Flattening Cell SYS_TOP ...
+*** Netlist is unique.
+** info: there are 2532 modules.
+** info: there are 1989 stdCell insts.
+
+*** Memory Usage v0.144 (Current mem = 280.098M, initial mem = 62.238M) ***
+**ERROR: (SOCCTE-29):	**ERROR: Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reasonfor error: No such file or directory
+**ERROR: (SOCSYT-16027):	Failed to read timing constraint file /home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc
+*info - Done with setDoAssign with 32 assigns removed and 0 assigns could not be removed.
+Total number of combinational cells: 433
+Total number of sequential cells: 174
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2M BUFX10M BUFX12M BUFX14M BUFX16M BUFX18M BUFX20M BUFX24M BUFX32M BUFX3M CLKBUFX1M BUFX4M BUFX5M BUFX6M BUFX8M CLKBUFX12M CLKBUFX16M CLKBUFX20M CLKBUFX24M CLKBUFX2M CLKBUFX3M CLKBUFX32M CLKBUFX40M CLKBUFX4M CLKBUFX6M CLKBUFX8M
+Total number of usable buffers: 26
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1M CLKINVX12M CLKINVX16M CLKINVX20M CLKINVX24M CLKINVX2M CLKINVX3M CLKINVX32M CLKINVX40M CLKINVX4M CLKINVX6M CLKINVX8M INVX10M INVX12M INVX14M INVX16M INVX18M INVX2M INVX1M INVX20M INVX24M INVX32M INVX4M INVX3M INVX6M INVX5M INVX8M INVXLM
+Total number of usable inverters: 28
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1M DLY1X4M DLY2X1M DLY2X4M DLY3X1M DLY3X4M DLY4X1M DLY4X4M
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+*info: set bottom ioPad orient R0
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF.
+**WARN: (SOCDC-1159):	Invalid input transition time. The default 0.1ps input transition time will be used.
+Set Input Pin Transition Delay as 0.1 ps.
+Reading Capacitance Table File /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl ...
+Cap Table was created using First Encounter 08.10-p004_1.
+Process name: tsmc13fsg.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+<CMD> create_library_set -name min_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.lib"
+<CMD> create_library_set -name max_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.lib"
+<CMD> create_library_set -name typ_library -timing "../std_cells/libs/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib"
+<CMD> create_constraint_mode -name func_mode -sdc_files {../DFT/sdc/SYS_TOP_func.sdc}
+<CMD> create_constraint_mode -name func_mode -sdc_files {../DFT/sdc/SYS_TOP_capture.sdc}
+**ERROR: (TCLCMD-1021):	A constraint mode of name 'func_mode' already exists.
+<CMD> loadFPlan ./SYS_TOP.fp
+Reading floorplan file - ./SYS_TOP.fp (mem = 281.8M).
+Set FPlanBox to (0 0 480940 320940)
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** End loading floorplan (cpu = 0:00:00.1, mem = 283.6M) ***
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> setDrawView place
+<CMD> placeDesign -inPlaceOpt -prePlaceOpt
+*** Starting placeDesign concurrent flow ***
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+*summary: 86 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.4) ***
+*** Starting "NanoPlace(TM) placement v0.845 (mem=299.7M)" ...
+*** Build Buffered Sizing Timing Model (Used Compact Buffer Set) ...(cpu=0:00:13.3 mem=360.7M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:15.4 mem=375.8M) ***
+Options: timingDriven ignoreScan ignoreSpare pinGuide gpeffort=medium 
+**WARN: (SOCDB-2082):	Scan chains were not defined, -ignoreScan option will be ignored. 
+Please first define the scan chains before using this option.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**ERROR: (SOCCTE-8):	CTE TimingGraph Initialization Failed due to previous errors. This may cause CTE not reporting any paths. Check the logfile for the errors and fix them.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**WARN: (SOCSP-162):	Failed to build timing graph.
+Timing-driven placement option disabled.
+#std cell=1903 #block=0 (0 floating + 0 preplaced) #ioInst=0 #net=2019 #term=8198 #term/net=4.06, #fixedIo=0, #floatIo=0, #fixedPin=19, #floatPin=0
+stdCell: 1903 single + 0 double + 0 multi
+Total standard cell length = 9.1832 (mm), area = 0.0264 (mm^2)
+Average module density = 0.747.
+Density for the design = 0.747.
+       = stdcell_area 22398 (26356 um^2) / alloc_area 29998 (35299 um^2).
+Pin Density = 0.366.
+            = total # of pins 8198 / total Instance area 22398.
+Identified 5 spare or floating instances, with no clusters.
+Iteration  1: Total net bbox = 5.055e+03 (3.97e+03 1.09e+03)
+              Est.  stn bbox = 5.055e+03 (3.97e+03 1.09e+03)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 378.6M
+Iteration  2: Total net bbox = 5.055e+03 (3.97e+03 1.09e+03)
+              Est.  stn bbox = 5.055e+03 (3.97e+03 1.09e+03)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 378.6M
+Iteration  3: Total net bbox = 6.305e+03 (4.50e+03 1.81e+03)
+              Est.  stn bbox = 6.305e+03 (4.50e+03 1.81e+03)
+              cpu = 0:00:00.5 real = 0:00:00.0 mem = 378.8M
+Iteration  4: Total net bbox = 2.224e+04 (1.37e+04 8.49e+03)
+              Est.  stn bbox = 2.224e+04 (1.37e+04 8.49e+03)
+              cpu = 0:00:01.7 real = 0:00:02.0 mem = 378.8M
+Iteration  5: Total net bbox = 2.934e+04 (1.70e+04 1.24e+04)
+              Est.  stn bbox = 2.934e+04 (1.70e+04 1.24e+04)
+              cpu = 0:00:00.9 real = 0:00:01.0 mem = 378.8M
+Iteration  6: Total net bbox = 3.372e+04 (1.97e+04 1.40e+04)
+              Est.  stn bbox = 3.372e+04 (1.97e+04 1.40e+04)
+              cpu = 0:00:01.0 real = 0:00:01.0 mem = 379.0M
+Iteration  7: Total net bbox = 3.551e+04 (2.15e+04 1.41e+04)
+              Est.  stn bbox = 4.562e+04 (2.74e+04 1.82e+04)
+              cpu = 0:00:04.2 real = 0:00:04.0 mem = 378.7M
+Iteration  8: Total net bbox = 3.551e+04 (2.15e+04 1.41e+04)
+              Est.  stn bbox = 4.562e+04 (2.74e+04 1.82e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 378.7M
+Iteration  9: Total net bbox = 3.780e+04 (2.13e+04 1.65e+04)
+              Est.  stn bbox = 3.780e+04 (2.13e+04 1.65e+04)
+              cpu = 0:00:01.3 real = 0:00:01.0 mem = 379.0M
+Iteration 10: Total net bbox = 4.128e+04 (2.48e+04 1.65e+04)
+              Est.  stn bbox = 5.179e+04 (3.09e+04 2.08e+04)
+              cpu = 0:00:03.0 real = 0:00:03.0 mem = 379.0M
+Iteration 11: Total net bbox = 4.463e+04 (2.79e+04 1.67e+04)
+              Est.  stn bbox = 5.545e+04 (3.44e+04 2.11e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 379.0M
+*** cost = 4.463e+04 (2.79e+04 1.67e+04) (cpu for global=0:00:07.3) real=0:00:07.0***
+Core Placement runtime cpu: 0:00:07.1 real: 0:00:07.0
+Starting refinePlace ...
+Placement tweakage begins.
+wire length = 4.548e+04 = 2.858e+04 H + 1.691e+04 V
+wire length = 3.996e+04 = 2.318e+04 H + 1.678e+04 V
+Placement tweakage ends.
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =        24.19 um
+  inst (U0_Async_fifo/u_fifo_mem/U126) with max move: (218.53, 67.24) -> (205.82, 55.76)
+  mean    (X+Y) =         4.56 um
+Total instances flipped : 34
+Total instances moved : 1243
+*** cpu=0:00:00.1   mem=379.0M  mem(used)=0.0M***
+Total net length = 4.010e+04 (2.320e+04 1.690e+04) (ext = 2.311e+03)
+*** End of Placement (cpu=0:00:23.0, real=0:00:25.0, mem=379.0M) ***
+default core: bins with density >  0.75 =   37 % ( 20 / 54 )
+*** Free Virtual Timing Model ...(mem=379.0M)
+Starting IO pin assignment...
+**WARN: (SOCSP-9025):	No scan chain specified/traced.
+setAnalysisMode  -domain allClockDomain -checkType setup -skew true -usefulSkew false -log true -warn true -caseAnalysis true -sequentialConstProp false -moduleIOCstr true -clockPropagation forcedIdeal -clkSrcPath false -timingSelfLoopsNoSkew false -asyncChecks async -useOutputPinCap true -latch true -latchDelayCalIteration 2 -timeBorrowing true -latchFullDelayCal false -clockGatingCheck true -enableMultipleDriveNet true -analysisType bcWc -cppr false -clkNetsMarking beforeConstProp -honorVirtualPartition false -honorClockDomains true
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 379.0M **
+Added -handlePreroute to trialRouteMode
+*** optDesign -preCTS ***
+DRC Margin: user margin 0.0; extra margin 0.2
+Setup Target Slack: user slack 0.0; extra slack 0.1
+Hold Target Slack: user slack 0.0
+*info: Setting setup target slack to 0.100
+*info: Hold target slack is 0.000
+*** CTE mode ***
+*** Starting trialRoute (mem=379.0M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -noPinGuide
+
+Nr of prerouted/Fixed nets = 0
+routingBox: (0 0) (480940 320940)
+coreBox:    (8200 8200) (472940 312940)
+Number of multi-gpin terms=239, multi-gpins=494, moved blk term=0/92
+
+Phase 1a route (0:00:00.0 379.0M):
+Est net length = 5.193e+04um = 2.857e+04H + 2.336e+04V
+Usage: (15.4%H 15.9%V) = (3.460e+04um 4.299e+04um) = (16796 14979)
+Obstruct: 51 = 0 (0.0%H) + 51 (0.8%V)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+Number obstruct path=20 reroute=0
+
+Phase 1b route (0:00:00.0 379.0M):
+Usage: (15.3%H 15.9%V) = (3.454e+04um 4.301e+04um) = (16766 14986)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1c route (0:00:00.0 379.0M):
+Usage: (15.3%H 15.9%V) = (3.439e+04um 4.294e+04um) = (16693 14960)
+Overflow: 8 = 0 (0.00% H) + 8 (0.12% V)
+
+Phase 1d route (0:00:00.0 379.0M):
+Usage: (15.3%H 15.9%V) = (3.439e+04um 4.294e+04um) = (16693 14960)
+Overflow: 8 = 0 (0.00% H) + 8 (0.12% V)
+
+Phase 1e route (0:00:00.0 379.0M):
+Usage: (15.3%H 15.9%V) = (3.439e+04um 4.294e+04um) = (16693 14960)
+Overflow: 8 = 0 (0.00% H) + 8 (0.12% V)
+
+Usage: (15.3%H 15.9%V) = (3.439e+04um 4.294e+04um) = (16693 14960)
+Overflow: 8 = 0 (0.00% H) + 8 (0.12% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	8	 0.12%
+--------------------------------------
+  0:	0	 0.00%	30	 0.46%
+  1:	0	 0.00%	52	 0.80%
+  2:	0	 0.00%	83	 1.28%
+  3:	0	 0.00%	55	 0.85%
+  4:	0	 0.00%	25	 0.38%
+  5:	6	 0.09%	24	 0.37%
+  6:	0	 0.00%	87	 1.34%
+  7:	233	 3.55%	37	 0.57%
+  8:	16	 0.24%	64	 0.98%
+  9:	143	 2.18%	221	 3.40%
+ 10:	199	 3.04%	436	 6.70%
+ 11:	227	 3.46%	734	11.29%
+ 12:	461	 7.03%	1067	16.41%
+ 13:	781	11.91%	1332	20.48%
+ 14:	1181	18.02%	1238	19.03%
+ 15:	1263	19.27%	978	15.04%
+ 16:	1098	16.75%	17	 0.26%
+ 17:	707	10.79%	2	 0.03%
+ 18:	240	 3.66%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+*** Memory Usage v0.144 (Current mem = 378.977M, initial mem = 62.238M) ***
+Phase 1l route (0:00:00.1 379.0M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (15.5%H 16.1%V) = (3.501e+04um 4.341e+04um) = (16990 15127)
+Overflow: 21 = 0 (0.00% H) + 21 (0.33% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -3:	0	 0.00%	1	 0.02%
+ -2:	0	 0.00%	1	 0.02%
+ -1:	0	 0.00%	18	 0.28%
+--------------------------------------
+  0:	0	 0.00%	24	 0.37%
+  1:	0	 0.00%	58	 0.89%
+  2:	0	 0.00%	72	 1.11%
+  3:	0	 0.00%	56	 0.86%
+  4:	0	 0.00%	26	 0.40%
+  5:	6	 0.09%	27	 0.42%
+  6:	0	 0.00%	89	 1.37%
+  7:	234	 3.57%	43	 0.66%
+  8:	20	 0.31%	75	 1.15%
+  9:	149	 2.27%	198	 3.04%
+ 10:	210	 3.20%	436	 6.70%
+ 11:	245	 3.74%	717	11.02%
+ 12:	458	 6.99%	1077	16.56%
+ 13:	805	12.28%	1341	20.62%
+ 14:	1176	17.94%	1233	18.96%
+ 15:	1248	19.04%	979	15.05%
+ 16:	1075	16.40%	17	 0.26%
+ 17:	694	10.59%	2	 0.03%
+ 18:	235	 3.59%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+
+*** Completed Phase 1 route (0:00:00.3 379.0M) ***
+
+
+Total length: 5.395e+04um, number of vias: 16299
+M1(H) length: 3.823e+00um, number of vias: 8179
+M2(V) length: 2.200e+04um, number of vias: 7369
+M3(H) length: 2.666e+04um, number of vias: 650
+M4(V) length: 3.853e+03um, number of vias: 97
+M5(H) length: 1.418e+03um, number of vias: 4
+M6(V) length: 1.353e+01um, number of vias: 0
+M7(H) length: 0.000e+00um
+*** Completed Phase 2 route (0:00:00.1 379.0M) ***
+
+*** Finished all Phases (cpu=0:00:00.4 mem=379.0M) ***
+Peak Memory Usage was 379.0M 
+*** Finished trialRoute (cpu=0:00:00.4 mem=379.0M) ***
+
+Default RC Extraction called for design SYS_TOP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using detail cap. scale factor for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 378.977M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+Calculate delays in BcWc mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 379.0M)
+Number of Loop : 0
+Start delay calculation (mem=378.977M)...
+Delay calculation completed.
+(0:00:00.4 378.977M 0)
+*** CDM Built up (cpu=0:00:00.5  mem= 379.0M) ***
+*info: Start fixing DRV (Mem = 378.98M) ...
+*info: Options = -maxCap -maxTran -noMaxFanout -sensitivity -backward -reduceBuffer -maxIter 1
+*info: Start fixing DRV iteration 1 ...
+*** Starting dpFixDRCViolation (379.0M)
+*info: 2 special nets excluded.
+*info: 63 no-driver nets excluded.
+*** Starting multi-driver net buffering ***
+*summary: 0 non-ignored multi-driver nets.
+*** Finished buffering multi-driver nets (CPU=0:00:00.0, MEM=379.0M) ***
+*info: There are 46 candidate Buffer cells
+*info: There are 48 candidate Inverter cells
+Initializing placement sections/sites ...
+Density before buffering = 0.746650
+Start fixing design rules ... (0:00:00.0 379.0M)
+Done fixing design rule (0:00:05.9 379.0M)
+
+Summary:
+21 buffers added on 8 nets (with 7 drivers resized)
+
+Density after buffering = 0.750383
+*** Completed dpFixDRCViolation (0:00:05.9 379.0M)
+
+*** Starting trialRoute (mem=379.0M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -keepMarkedOptRoutes -noPinGuide
+
+Nr of prerouted/Fixed nets = 0
+routingBox: (0 0) (480940 320940)
+coreBox:    (8200 8200) (472940 312940)
+Number of multi-gpin terms=241, multi-gpins=497, moved blk term=0/92
+
+Phase 1a route (0:00:00.1 379.0M):
+Est net length = 5.272e+04um = 2.910e+04H + 2.362e+04V
+Usage: (15.6%H 16.1%V) = (3.517e+04um 4.339e+04um) = (17070 15119)
+Obstruct: 51 = 0 (0.0%H) + 51 (0.8%V)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+Number obstruct path=20 reroute=0
+
+Phase 1b route (0:00:00.0 379.0M):
+Usage: (15.6%H 16.1%V) = (3.510e+04um 4.341e+04um) = (17039 15126)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1c route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.334e+04um) = (16983 15102)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1d route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.334e+04um) = (16983 15102)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1e route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.335e+04um) = (16983 15104)
+Overflow: 7 = 0 (0.00% H) + 7 (0.11% V)
+
+Phase 1f route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.337e+04um) = (16983 15110)
+Overflow: 2 = 0 (0.00% H) + 2 (0.03% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	2	 0.03%
+--------------------------------------
+  0:	0	 0.00%	37	 0.57%
+  1:	0	 0.00%	53	 0.81%
+  2:	0	 0.00%	79	 1.21%
+  3:	0	 0.00%	57	 0.88%
+  4:	0	 0.00%	22	 0.34%
+  5:	6	 0.09%	22	 0.34%
+  6:	1	 0.02%	92	 1.41%
+  7:	233	 3.55%	40	 0.62%
+  8:	17	 0.26%	70	 1.08%
+  9:	153	 2.33%	223	 3.43%
+ 10:	204	 3.11%	441	 6.78%
+ 11:	242	 3.69%	749	11.52%
+ 12:	472	 7.20%	1066	16.39%
+ 13:	803	12.25%	1348	20.73%
+ 14:	1191	18.17%	1207	18.56%
+ 15:	1219	18.60%	967	14.87%
+ 16:	1076	16.41%	11	 0.17%
+ 17:	700	10.68%	4	 0.06%
+ 18:	238	 3.63%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+Using detail cap. scale factor for clock nets.
+
+*** Memory Usage v0.144 (Current mem = 378.977M, initial mem = 62.238M) ***
+Phase 1l route (0:00:00.1 379.0M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (15.8%H 16.3%V) = (3.563e+04um 4.386e+04um) = (17289 15281)
+Overflow: 15 = 0 (0.00% H) + 15 (0.23% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	15	 0.23%
+--------------------------------------
+  0:	0	 0.00%	28	 0.43%
+  1:	0	 0.00%	60	 0.92%
+  2:	0	 0.00%	69	 1.06%
+  3:	0	 0.00%	58	 0.89%
+  4:	0	 0.00%	22	 0.34%
+  5:	6	 0.09%	27	 0.42%
+  6:	1	 0.02%	93	 1.43%
+  7:	233	 3.55%	43	 0.66%
+  8:	24	 0.37%	85	 1.31%
+  9:	159	 2.43%	194	 2.98%
+ 10:	213	 3.25%	451	 6.93%
+ 11:	263	 4.01%	738	11.35%
+ 12:	471	 7.19%	1064	16.36%
+ 13:	820	12.51%	1359	20.89%
+ 14:	1185	18.08%	1201	18.47%
+ 15:	1211	18.47%	968	14.88%
+ 16:	1048	15.99%	11	 0.17%
+ 17:	688	10.50%	4	 0.06%
+ 18:	233	 3.55%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+
+*** Completed Phase 1 route (0:00:00.3 379.0M) ***
+
+
+Total length: 5.477e+04um, number of vias: 16403
+M1(H) length: 3.823e+00um, number of vias: 8217
+M2(V) length: 2.207e+04um, number of vias: 7399
+M3(H) length: 2.690e+04um, number of vias: 677
+M4(V) length: 4.022e+03um, number of vias: 106
+M5(H) length: 1.742e+03um, number of vias: 4
+M6(V) length: 3.936e+01um, number of vias: 0
+M7(H) length: 0.000e+00um
+*** Completed Phase 2 route (0:00:00.2 379.0M) ***
+
+*** Finished all Phases (cpu=0:00:00.5 mem=379.0M) ***
+Peak Memory Usage was 379.0M 
+*** Finished trialRoute (cpu=0:00:00.5 mem=379.0M) ***
+
+Default RC Extraction called for design SYS_TOP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using detail cap. scale factor for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 378.977M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+Calculate delays in BcWc mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 379.0M)
+Number of Loop : 0
+Start delay calculation (mem=378.977M)...
+Delay calculation completed.
+(0:00:00.4 378.977M 0)
+*** CDM Built up (cpu=0:00:00.6  mem= 379.0M) ***
+*info: DRV Fixing Iteration 1.
+*info: Remaining violations:
+*info:   Max cap violations:    0
+*info:   Max tran violations:   0
+*info:   Prev Max cap violations:    3
+*info:   Prev Max tran violations:   715
+*info:
+*info: Completed fixing DRV (CPU Time = 0:00:08, Mem = 378.98M).
+**optDesign ... cpu = 0:00:09, real = 0:00:09, mem = 379.0M **
+*** Starting optFanout (379.0M)
+*info: 2 special nets excluded.
+*info: 63 no-driver nets excluded.
+*** Starting multi-driver net buffering ***
+*summary: 0 non-ignored multi-driver nets.
+*** Finished buffering multi-driver nets (CPU=0:00:00.0, MEM=379.0M) ***
+Start fixing timing ... (0:00:00.1 379.0M)
+*info: Buffered 0 large fanout net (> 100 terms)
+Done fixing timing (0:00:00.1 379.0M)
+
+Summary:
+0 buffer added on 0 net (with 0 driver resized)
+
+Density after buffering = 0.750383
+*** Completed optFanout (0:00:00.2 379.0M)
+
+**optDesign ... cpu = 0:00:09, real = 0:00:10, mem = 379.0M **
+*** Check timing (0:00:00.0)
+************ Recovering area ***************
+*** Starting Area Reclaim ***
+** Density before area reclaim = 75.038% **
+
+*** starting 1-st reclaim pass: 1556 instances 
+
+
+** Area Reclaim Summary: Buffer Deletion = 0 Declone = 0 Downsize = 0 **
+** Density Change = 0.000% **
+** Density after area reclaim = 75.038% **
+*** Finished Area Reclaim (0:00:00.1) ***
+*** Starting sequential cell resizing ***
+density before resizing = 75.038%
+*summary:      0 instances changed cell type
+density after resizing = 75.038%
+*** Finish sequential cell resizing (cpu=0:00:00.1 mem=379.0M) ***
+density before resizing = 75.038%
+density after resizing = 75.038%
+*** Starting trialRoute (mem=379.0M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -keepMarkedOptRoutes -noPinGuide
+
+Nr of prerouted/Fixed nets = 0
+routingBox: (0 0) (480940 320940)
+coreBox:    (8200 8200) (472940 312940)
+Number of multi-gpin terms=241, multi-gpins=497, moved blk term=0/92
+
+Phase 1a route (0:00:00.1 379.0M):
+Est net length = 5.272e+04um = 2.910e+04H + 2.362e+04V
+Usage: (15.6%H 16.1%V) = (3.517e+04um 4.339e+04um) = (17070 15119)
+Obstruct: 51 = 0 (0.0%H) + 51 (0.8%V)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+Number obstruct path=20 reroute=0
+
+Phase 1b route (0:00:00.0 379.0M):
+Usage: (15.6%H 16.1%V) = (3.510e+04um 4.341e+04um) = (17039 15126)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1c route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.334e+04um) = (16983 15102)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1d route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.334e+04um) = (16983 15102)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1e route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.335e+04um) = (16983 15104)
+Overflow: 7 = 0 (0.00% H) + 7 (0.11% V)
+
+Phase 1f route (0:00:00.0 379.0M):
+Usage: (15.5%H 16.1%V) = (3.499e+04um 4.337e+04um) = (16983 15110)
+Overflow: 2 = 0 (0.00% H) + 2 (0.03% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	2	 0.03%
+--------------------------------------
+  0:	0	 0.00%	37	 0.57%
+  1:	0	 0.00%	53	 0.81%
+  2:	0	 0.00%	79	 1.21%
+  3:	0	 0.00%	57	 0.88%
+  4:	0	 0.00%	22	 0.34%
+  5:	6	 0.09%	22	 0.34%
+  6:	1	 0.02%	92	 1.41%
+  7:	233	 3.55%	40	 0.62%
+  8:	17	 0.26%	70	 1.08%
+  9:	153	 2.33%	223	 3.43%
+ 10:	204	 3.11%	441	 6.78%
+ 11:	242	 3.69%	749	11.52%
+ 12:	472	 7.20%	1066	16.39%
+ 13:	803	12.25%	1348	20.73%
+ 14:	1191	18.17%	1207	18.56%
+ 15:	1219	18.60%	967	14.87%
+ 16:	1076	16.41%	11	 0.17%
+ 17:	700	10.68%	4	 0.06%
+ 18:	238	 3.63%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+Using detail cap. scale factor for clock nets.
+
+*** Memory Usage v0.144 (Current mem = 378.977M, initial mem = 62.238M) ***
+Phase 1l route (0:00:00.1 379.0M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (15.8%H 16.3%V) = (3.563e+04um 4.386e+04um) = (17289 15281)
+Overflow: 15 = 0 (0.00% H) + 15 (0.23% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	15	 0.23%
+--------------------------------------
+  0:	0	 0.00%	28	 0.43%
+  1:	0	 0.00%	60	 0.92%
+  2:	0	 0.00%	69	 1.06%
+  3:	0	 0.00%	58	 0.89%
+  4:	0	 0.00%	22	 0.34%
+  5:	6	 0.09%	27	 0.42%
+  6:	1	 0.02%	93	 1.43%
+  7:	233	 3.55%	43	 0.66%
+  8:	24	 0.37%	85	 1.31%
+  9:	159	 2.43%	194	 2.98%
+ 10:	213	 3.25%	451	 6.93%
+ 11:	263	 4.01%	738	11.35%
+ 12:	471	 7.19%	1064	16.36%
+ 13:	820	12.51%	1359	20.89%
+ 14:	1185	18.08%	1201	18.47%
+ 15:	1211	18.47%	968	14.88%
+ 16:	1048	15.99%	11	 0.17%
+ 17:	688	10.50%	4	 0.06%
+ 18:	233	 3.55%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+
+*** Completed Phase 1 route (0:00:00.3 379.0M) ***
+
+
+Total length: 5.477e+04um, number of vias: 16403
+M1(H) length: 3.823e+00um, number of vias: 8217
+M2(V) length: 2.207e+04um, number of vias: 7399
+M3(H) length: 2.690e+04um, number of vias: 677
+M4(V) length: 4.022e+03um, number of vias: 106
+M5(H) length: 1.742e+03um, number of vias: 4
+M6(V) length: 3.936e+01um, number of vias: 0
+M7(H) length: 0.000e+00um
+*** Completed Phase 2 route (0:00:00.1 379.0M) ***
+
+*** Finished all Phases (cpu=0:00:00.4 mem=379.0M) ***
+Peak Memory Usage was 379.0M 
+*** Finished trialRoute (cpu=0:00:00.5 mem=379.0M) ***
+
+Default RC Extraction called for design SYS_TOP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using detail cap. scale factor for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 378.977M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+Calculate delays in BcWc mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 379.0M)
+Number of Loop : 0
+Start delay calculation (mem=378.977M)...
+Delay calculation completed.
+(0:00:00.4 378.977M 0)
+*** CDM Built up (cpu=0:00:00.6  mem= 379.0M) ***
+**optDesign ... cpu = 0:00:11, real = 0:00:12, mem = 379.0M **
+*** Check timing (0:00:00.1)
+*** Starting optCritPath ***
+*info: 2 special nets excluded.
+*info: 63 no-driver nets excluded.
+Density : 0.7504
+Max route overflow : 0.0023
+*** Starting delays update (0:00:00.3 mem=379.0M) ***
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+*** Finished delays update (0:00:00.9 mem=379.0M) ***
+*** Done optCritPath (0:00:01.1 378.98M) ***
+**optDesign ... cpu = 0:00:12, real = 0:00:13, mem = 379.0M **
+setClockDomains -fromType register -toType register 
+**WARN: (SOCCTE-318):	Paths not in the reg2reg domain will be added 1000ns slack adjustment
+*** Check timing (0:00:00.2)
+Working on reg2reg pathgroup
+*** Starting optCritPath ***
+*info: 2 special nets excluded.
+*info: 63 no-driver nets excluded.
+Density : 0.7504
+Max route overflow : 0.0023
+*** Starting delays update (0:00:00.3 mem=379.0M) ***
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+*** Finished delays update (0:00:01.0 mem=379.0M) ***
+*** Done optCritPath (0:00:01.3 378.98M) ***
+**optDesign ... cpu = 0:00:14, real = 0:00:15, mem = 379.0M **
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**optDesign ... cpu = 0:00:14, real = 0:00:15, mem = 379.0M **
+*** Finished optDesign ***
+*** Starting "NanoPlace(TM) placement v0.845 (mem=379.0M)" ...
+*** Build Buffered Sizing Timing Model (Used Compact Buffer Set) ...(cpu=0:00:11.5 mem=379.0M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:13.6 mem=379.0M) ***
+Options: timingDriven ignoreSpare pinGuide gpeffort=medium 
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**ERROR: (SOCCTE-8):	CTE TimingGraph Initialization Failed due to previous errors. This may cause CTE not reporting any paths. Check the logfile for the errors and fix them.
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**WARN: (SOCSP-162):	Failed to build timing graph.
+Timing-driven placement option disabled.
+#std cell=1924 #block=0 (0 floating + 0 preplaced) #ioInst=0 #net=2040 #term=8240 #term/net=4.04, #fixedIo=0, #floatIo=0, #fixedPin=19, #floatPin=0
+stdCell: 1924 single + 0 double + 0 multi
+Total standard cell length = 9.2291 (mm), area = 0.0265 (mm^2)
+Average module density = 0.750.
+Density for the design = 0.750.
+       = stdcell_area 22510 (26488 um^2) / alloc_area 29998 (35299 um^2).
+Pin Density = 0.366.
+            = total # of pins 8240 / total Instance area 22510.
+Identified 5 spare or floating instances, with no clusters.
+Iteration 11: Total net bbox = 4.240e+04 (2.54e+04 1.70e+04)
+              Est.  stn bbox = 5.340e+04 (3.16e+04 2.18e+04)
+              cpu = 0:00:02.6 real = 0:00:02.0 mem = 380.8M
+Iteration 12: Total net bbox = 4.562e+04 (2.85e+04 1.71e+04)
+              Est.  stn bbox = 5.690e+04 (3.50e+04 2.19e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 380.8M
+*** cost = 4.562e+04 (2.85e+04 1.71e+04) (cpu for global=0:00:02.7) real=0:00:02.0***
+Core Placement runtime cpu: 0:00:02.6 real: 0:00:02.0
+Starting refinePlace ...
+Placement tweakage begins.
+wire length = 4.699e+04 = 2.952e+04 H + 1.747e+04 V
+wire length = 4.126e+04 = 2.399e+04 H + 1.727e+04 V
+Placement tweakage ends.
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =        44.69 um
+  inst (U0_Async_fifo/FE_OFC11_SYNC_RST_REF_scan) with max move: (175.07, 47.15) -> (219.76, 47.15)
+  mean    (X+Y) =         5.17 um
+Total instances flipped : 43
+Total instances moved : 1308
+*** cpu=0:00:00.2   mem=380.8M  mem(used)=0.0M***
+Total net length = 4.139e+04 (2.400e+04 1.739e+04) (ext = 2.211e+03)
+*** End of Placement (cpu=0:00:16.7, real=0:00:18.0, mem=380.8M) ***
+default core: bins with density >  0.75 = 46.3 % ( 25 / 54 )
+*** Free Virtual Timing Model ...(mem=380.8M)
+Starting IO pin assignment...
+**WARN: (SOCSP-9025):	No scan chain specified/traced.
+*** Finishing placeDesign concurrent flow ***
+**placeDesign ... cpu = 0: 0:55, real = 0: 0:58, mem = 378.7M **
+<CMD> addTieHiLo -cell TIELOM -prefix LTIE
+No constraint set for distance
+No constraint set for fanout
+Existing tie instances of cell TIELOM, if found would be deleted
+Deleted 0 physical inst  (cell TIELOM / prefix -).
+Deleted 0 logical insts of cell TIELOM with prefix LTIE
+INFO: Total Number of Tie Cells (TIELOM) placed: 2
+<CMD> addTieHiLo -cell TIEHIM -prefix HTIE
+No constraint set for distance
+No constraint set for fanout
+Existing tie instances of cell TIEHIM, if found would be deleted
+Deleted 0 physical inst  (cell TIEHIM / prefix -).
+Deleted 0 logical insts of cell TIEHIM with prefix HTIE
+INFO: Total Number of Tie Cells (TIEHIM) placed: 5
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -inst *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -inst *
+<CMD> setDrawView ameba
+<CMD> setDrawView fplan
+<CMD> zoomOut
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+<CMD> getIoFlowFlag
+<CMD> getIoFlowFlag
+<CMD> getIoFlowFlag
+<CMD> setDrawView fplan
+<CMD> panPage -1 0
+<CMD> panPage 1 0
+<CMD> setDrawView place
+<CMD> getIoFlowFlag
+<CMD> setDrawView ameba
+<CMD> setDrawView place
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (SOCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -preCTS -idealClock -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_preCTS -outDir timingReports
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+*** Starting trialRoute (mem=378.7M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -keepMarkedOptRoutes -noPinGuide
+
+Nr of prerouted/Fixed nets = 0
+routingBox: (0 0) (480940 320940)
+coreBox:    (8200 8200) (472940 312940)
+Number of multi-gpin terms=226, multi-gpins=463, moved blk term=0/97
+
+Phase 1a route (0:00:00.1 378.7M):
+Est net length = 5.246e+04um = 2.912e+04H + 2.335e+04V
+Usage: (15.6%H 16.0%V) = (3.523e+04um 4.307e+04um) = (17100 15006)
+Obstruct: 51 = 0 (0.0%H) + 51 (0.8%V)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+Number obstruct path=18 reroute=0
+
+Phase 1b route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.522e+04um 4.308e+04um) = (17094 15011)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+
+Phase 1c route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17040 14992)
+Overflow: 10 = 0 (0.00% H) + 10 (0.15% V)
+
+Phase 1d route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17041 14992)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1e route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.512e+04um 4.303e+04um) = (17043 14992)
+Overflow: 7 = 0 (0.00% H) + 7 (0.11% V)
+
+Phase 1f route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.513e+04um 4.304e+04um) = (17049 14998)
+Overflow: 2 = 0 (0.00% H) + 2 (0.03% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	2	 0.03%
+--------------------------------------
+  0:	0	 0.00%	47	 0.72%
+  1:	0	 0.00%	47	 0.72%
+  2:	0	 0.00%	73	 1.12%
+  3:	0	 0.00%	51	 0.78%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	35	 0.54%
+  6:	3	 0.05%	92	 1.41%
+  7:	233	 3.55%	32	 0.49%
+  8:	27	 0.41%	82	 1.26%
+  9:	175	 2.67%	220	 3.38%
+ 10:	216	 3.30%	475	 7.30%
+ 11:	244	 3.72%	719	11.05%
+ 12:	485	 7.40%	1087	16.71%
+ 13:	806	12.30%	1287	19.79%
+ 14:	1107	16.89%	1084	16.67%
+ 15:	1184	18.06%	1114	17.13%
+ 16:	1074	16.38%	17	 0.26%
+ 17:	686	10.47%	6	 0.09%
+ 18:	309	 4.71%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+Using detail cap. scale factor for clock nets.
+
+*** Memory Usage v0.144 (Current mem = 378.727M, initial mem = 62.238M) ***
+Phase 1l route (0:00:00.2 378.7M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (15.9%H 16.2%V) = (3.587e+04um 4.379e+04um) = (17404 15257)
+Overflow: 18 = 0 (0.00% H) + 18 (0.28% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -3:	0	 0.00%	1	 0.02%
+ -2:	0	 0.00%	1	 0.02%
+ -1:	0	 0.00%	15	 0.23%
+--------------------------------------
+  0:	0	 0.00%	40	 0.62%
+  1:	0	 0.00%	45	 0.69%
+  2:	0	 0.00%	68	 1.05%
+  3:	0	 0.00%	53	 0.81%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	39	 0.60%
+  6:	5	 0.08%	91	 1.40%
+  7:	236	 3.60%	38	 0.58%
+  8:	33	 0.50%	91	 1.40%
+  9:	178	 2.72%	232	 3.57%
+ 10:	227	 3.46%	444	 6.83%
+ 11:	261	 3.98%	733	11.27%
+ 12:	503	 7.67%	1082	16.64%
+ 13:	812	12.39%	1291	19.85%
+ 14:	1099	16.77%	1069	16.44%
+ 15:	1174	17.91%	1115	17.14%
+ 16:	1047	15.97%	16	 0.25%
+ 17:	668	10.19%	6	 0.09%
+ 18:	306	 4.67%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+
+*** Completed Phase 1 route (0:00:00.4 378.7M) ***
+
+
+Total length: 5.471e+04um, number of vias: 16598
+M1(H) length: 3.223e+00um, number of vias: 8254
+M2(V) length: 2.155e+04um, number of vias: 7434
+M3(H) length: 2.629e+04um, number of vias: 755
+M4(V) length: 4.379e+03um, number of vias: 153
+M5(H) length: 2.475e+03um, number of vias: 2
+M6(V) length: 4.510e+00um, number of vias: 0
+M7(H) length: 0.000e+00um
+*** Completed Phase 2 route (0:00:00.1 378.7M) ***
+
+*** Finished all Phases (cpu=0:00:00.5 mem=378.7M) ***
+Peak Memory Usage was 378.7M 
+*** Finished trialRoute (cpu=0:00:00.6 mem=378.7M) ***
+
+Default RC Extraction called for design SYS_TOP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using detail cap. scale factor for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 378.727M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
++----------------+---------------------------+--------------+
+|                |            Real           |     Total    |
+|    DRVs        +--------------+------------+--------------|
+|                |Nr nets(terms)| Worst Vio  |Nr nets(terms)|
++----------------+--------------+------------+--------------+
+|   max_cap      |    0 (0)     |   0.000    |    0 (0)     |
+|   max_tran     |    0 (0)     |   0.000    |    0 (0)     |
+|   max_fanout   |    0 (0)     |     0      |    0 (0)     |
++----------------+--------------+------------+--------------+
+
+Density: 75.108%
+Routing Overflow: 0.00% H and 0.28% V
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 1.95 sec
+Total Real time: 3.0 sec
+Total Memory Usage: 378.726562 Mbytes
+<CMD> clockDesign -genSpecOnly Clock.ctstch
+<clockDesign INFO> 'setCTSMode -routeClkNet true' is set inside clockDesign.
+
+<clockDesign CMD> createClockTreeSpec -output Clock.ctstch
+
+******* createClockTreeSpec begin *******
+Options:  -output Clock.ctstch 
+createClockTreeSpec extracts the buffer list automatically.
+CTE Mode
+Total 0 clock roots are extracted.
+*** End createClockTreeSpec (cpu=0:00:00.0, real=0:00:00.0, mem=378.7M) ***
+<CMD> clockDesign -specFile Clock.ctstch -outDir clock_report -fixedInstBeforeCTS
+<clockDesign INFO> 'setCTSMode -routeClkNet true' is set inside clockDesign.
+
+<clockDesign CMD> cleanupSpecifyClockTree
+<clockDesign CMD> specifyClockTree -file Clock.ctstch
+
+Reading clock tree spec file 'Clock.ctstch' ...
+
+
+***** !! NOTE !! *****
+
+CTS treats D-pins and I/O pins as non-synchronous pins by default.
+If you want to change the behavior, you need to use the SetDPinAsSync
+or SetIoPinAsSync statement in the clock tree specification file,
+or use the setCTSMode -traceDPinAsLeaf {true|false} command,
+or use the setCTSMode -traceIoPinAsLeaf {true|false} command
+before specifyClockTree command.
+
+*** End specifyClockTree (cpu=0:00:00.0, real=0:00:00.0, mem=378.7M) ***
+<clockDesign CMD> changeClockStatus -all -fixedBuffers
+Redoing specifyClockTree  -file Clock.ctstch  ...
+
+changeClockStatus Option :  -all -fixedBuffers 
+**ERROR: (SOCCK-114):	No valid clock tree root is specified.
+*** End changeClockStatus (cpu=0:00:00.0, real=0:00:00.0, mem=378.7M) ***
+<clockDesign CMD> deleteClockTree -all
+Redoing specifyClockTree  -file Clock.ctstch  ...
+
+deleteClockTree Option :  -all 
+**ERROR: (SOCCK-114):	No valid clock tree root is specified.
+*** End deleteClockTree (cpu=0:00:00.0, real=0:00:00.0, mem=378.7M) ***
+<clockDesign CMD> ckSynthesis -report clock_report/clock.report -forceReconvergent -breakLoop
+Redoing specifyClockTree  -file Clock.ctstch  ...
+
+
+ckSynthesis Option :  -report clock_report/clock.report -forceReconvergent -breakLoop 
+**WARN: (SOCCK-313):	You have not specified a clock tree. Use the specifyClockTree command to do so.
+*** End ckSynthesis (cpu=0:00:00.0, real=0:00:00.0, mem=378.7M) ***
+<clockDesign CMD> timeDesign -postCTS -outDir clock_report
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+*** Starting trialRoute (mem=378.7M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -keepMarkedOptRoutes -noPinGuide
+
+Nr of prerouted/Fixed nets = 0
+routingBox: (0 0) (480940 320940)
+coreBox:    (8200 8200) (472940 312940)
+Number of multi-gpin terms=226, multi-gpins=463, moved blk term=0/97
+
+Phase 1a route (0:00:00.0 378.7M):
+Est net length = 5.246e+04um = 2.912e+04H + 2.335e+04V
+Usage: (15.6%H 16.0%V) = (3.523e+04um 4.307e+04um) = (17100 15006)
+Obstruct: 51 = 0 (0.0%H) + 51 (0.8%V)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+Number obstruct path=18 reroute=0
+
+Phase 1b route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.522e+04um 4.308e+04um) = (17094 15011)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+
+Phase 1c route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17040 14992)
+Overflow: 10 = 0 (0.00% H) + 10 (0.15% V)
+
+Phase 1d route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17041 14992)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1e route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.512e+04um 4.303e+04um) = (17043 14992)
+Overflow: 7 = 0 (0.00% H) + 7 (0.11% V)
+
+Phase 1f route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.513e+04um 4.304e+04um) = (17049 14998)
+Overflow: 2 = 0 (0.00% H) + 2 (0.03% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	2	 0.03%
+--------------------------------------
+  0:	0	 0.00%	47	 0.72%
+  1:	0	 0.00%	47	 0.72%
+  2:	0	 0.00%	73	 1.12%
+  3:	0	 0.00%	51	 0.78%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	35	 0.54%
+  6:	3	 0.05%	92	 1.41%
+  7:	233	 3.55%	32	 0.49%
+  8:	27	 0.41%	82	 1.26%
+  9:	175	 2.67%	220	 3.38%
+ 10:	216	 3.30%	475	 7.30%
+ 11:	244	 3.72%	719	11.05%
+ 12:	485	 7.40%	1087	16.71%
+ 13:	806	12.30%	1287	19.79%
+ 14:	1107	16.89%	1084	16.67%
+ 15:	1184	18.06%	1114	17.13%
+ 16:	1074	16.38%	17	 0.26%
+ 17:	686	10.47%	6	 0.09%
+ 18:	309	 4.71%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+Using detail cap. scale factor for clock nets.
+
+*** Memory Usage v0.144 (Current mem = 378.727M, initial mem = 62.238M) ***
+Phase 1l route (0:00:00.2 378.7M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (15.9%H 16.2%V) = (3.587e+04um 4.379e+04um) = (17404 15257)
+Overflow: 18 = 0 (0.00% H) + 18 (0.28% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -3:	0	 0.00%	1	 0.02%
+ -2:	0	 0.00%	1	 0.02%
+ -1:	0	 0.00%	15	 0.23%
+--------------------------------------
+  0:	0	 0.00%	40	 0.62%
+  1:	0	 0.00%	45	 0.69%
+  2:	0	 0.00%	68	 1.05%
+  3:	0	 0.00%	53	 0.81%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	39	 0.60%
+  6:	5	 0.08%	91	 1.40%
+  7:	236	 3.60%	38	 0.58%
+  8:	33	 0.50%	91	 1.40%
+  9:	178	 2.72%	232	 3.57%
+ 10:	227	 3.46%	444	 6.83%
+ 11:	261	 3.98%	733	11.27%
+ 12:	503	 7.67%	1082	16.64%
+ 13:	812	12.39%	1291	19.85%
+ 14:	1099	16.77%	1069	16.44%
+ 15:	1174	17.91%	1115	17.14%
+ 16:	1047	15.97%	16	 0.25%
+ 17:	668	10.19%	6	 0.09%
+ 18:	306	 4.67%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+
+*** Completed Phase 1 route (0:00:00.4 378.7M) ***
+
+
+Total length: 5.471e+04um, number of vias: 16598
+M1(H) length: 3.223e+00um, number of vias: 8254
+M2(V) length: 2.155e+04um, number of vias: 7434
+M3(H) length: 2.629e+04um, number of vias: 755
+M4(V) length: 4.379e+03um, number of vias: 153
+M5(H) length: 2.475e+03um, number of vias: 2
+M6(V) length: 4.510e+00um, number of vias: 0
+M7(H) length: 0.000e+00um
+*** Completed Phase 2 route (0:00:00.1 378.7M) ***
+
+*** Finished all Phases (cpu=0:00:00.5 mem=378.7M) ***
+Peak Memory Usage was 378.7M 
+*** Finished trialRoute (cpu=0:00:00.5 mem=378.7M) ***
+
+Default RC Extraction called for design SYS_TOP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using detail cap. scale factor for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 378.727M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
++----------------+---------------------------+--------------+
+|                |            Real           |     Total    |
+|    DRVs        +--------------+------------+--------------|
+|                |Nr nets(terms)| Worst Vio  |Nr nets(terms)|
++----------------+--------------+------------+--------------+
+|   max_cap      |    0 (0)     |   0.000    |    0 (0)     |
+|   max_tran     |    0 (0)     |   0.000    |    0 (0)     |
+|   max_fanout   |    0 (0)     |     0      |    0 (0)     |
++----------------+--------------+------------+--------------+
+
+Density: 75.108%
+Routing Overflow: 0.00% H and 0.28% V
+------------------------------------------------------------
+Reported timing to dir clock_report
+Total CPU time: 1.64 sec
+Total Real time: 3.0 sec
+Total Memory Usage: 378.726562 Mbytes
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (SOCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_postCTS -outDir timingReports
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+*** Starting trialRoute (mem=378.7M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -keepMarkedOptRoutes -noPinGuide
+
+Nr of prerouted/Fixed nets = 0
+routingBox: (0 0) (480940 320940)
+coreBox:    (8200 8200) (472940 312940)
+Number of multi-gpin terms=226, multi-gpins=463, moved blk term=0/97
+
+Phase 1a route (0:00:00.0 378.7M):
+Est net length = 5.246e+04um = 2.912e+04H + 2.335e+04V
+Usage: (15.6%H 16.0%V) = (3.523e+04um 4.307e+04um) = (17100 15006)
+Obstruct: 51 = 0 (0.0%H) + 51 (0.8%V)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+Number obstruct path=18 reroute=0
+
+Phase 1b route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.522e+04um 4.308e+04um) = (17094 15011)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+
+Phase 1c route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17040 14992)
+Overflow: 10 = 0 (0.00% H) + 10 (0.15% V)
+
+Phase 1d route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17041 14992)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1e route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.512e+04um 4.303e+04um) = (17043 14992)
+Overflow: 7 = 0 (0.00% H) + 7 (0.11% V)
+
+Phase 1f route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.513e+04um 4.304e+04um) = (17049 14998)
+Overflow: 2 = 0 (0.00% H) + 2 (0.03% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	2	 0.03%
+--------------------------------------
+  0:	0	 0.00%	47	 0.72%
+  1:	0	 0.00%	47	 0.72%
+  2:	0	 0.00%	73	 1.12%
+  3:	0	 0.00%	51	 0.78%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	35	 0.54%
+  6:	3	 0.05%	92	 1.41%
+  7:	233	 3.55%	32	 0.49%
+  8:	27	 0.41%	82	 1.26%
+  9:	175	 2.67%	220	 3.38%
+ 10:	216	 3.30%	475	 7.30%
+ 11:	244	 3.72%	719	11.05%
+ 12:	485	 7.40%	1087	16.71%
+ 13:	806	12.30%	1287	19.79%
+ 14:	1107	16.89%	1084	16.67%
+ 15:	1184	18.06%	1114	17.13%
+ 16:	1074	16.38%	17	 0.26%
+ 17:	686	10.47%	6	 0.09%
+ 18:	309	 4.71%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+Using detail cap. scale factor for clock nets.
+
+*** Memory Usage v0.144 (Current mem = 378.727M, initial mem = 62.238M) ***
+Phase 1l route (0:00:00.2 378.7M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (15.9%H 16.2%V) = (3.587e+04um 4.379e+04um) = (17404 15257)
+Overflow: 18 = 0 (0.00% H) + 18 (0.28% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -3:	0	 0.00%	1	 0.02%
+ -2:	0	 0.00%	1	 0.02%
+ -1:	0	 0.00%	15	 0.23%
+--------------------------------------
+  0:	0	 0.00%	40	 0.62%
+  1:	0	 0.00%	45	 0.69%
+  2:	0	 0.00%	68	 1.05%
+  3:	0	 0.00%	53	 0.81%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	39	 0.60%
+  6:	5	 0.08%	91	 1.40%
+  7:	236	 3.60%	38	 0.58%
+  8:	33	 0.50%	91	 1.40%
+  9:	178	 2.72%	232	 3.57%
+ 10:	227	 3.46%	444	 6.83%
+ 11:	261	 3.98%	733	11.27%
+ 12:	503	 7.67%	1082	16.64%
+ 13:	812	12.39%	1291	19.85%
+ 14:	1099	16.77%	1069	16.44%
+ 15:	1174	17.91%	1115	17.14%
+ 16:	1047	15.97%	16	 0.25%
+ 17:	668	10.19%	6	 0.09%
+ 18:	306	 4.67%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+
+*** Completed Phase 1 route (0:00:00.3 378.7M) ***
+
+
+Total length: 5.471e+04um, number of vias: 16598
+M1(H) length: 3.223e+00um, number of vias: 8254
+M2(V) length: 2.155e+04um, number of vias: 7434
+M3(H) length: 2.629e+04um, number of vias: 755
+M4(V) length: 4.379e+03um, number of vias: 153
+M5(H) length: 2.475e+03um, number of vias: 2
+M6(V) length: 4.510e+00um, number of vias: 0
+M7(H) length: 0.000e+00um
+*** Completed Phase 2 route (0:00:00.2 378.7M) ***
+
+*** Finished all Phases (cpu=0:00:00.5 mem=378.7M) ***
+Peak Memory Usage was 378.7M 
+*** Finished trialRoute (cpu=0:00:00.5 mem=378.7M) ***
+
+Default RC Extraction called for design SYS_TOP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using detail cap. scale factor for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 378.727M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
++----------------+---------------------------+--------------+
+|                |            Real           |     Total    |
+|    DRVs        +--------------+------------+--------------|
+|                |Nr nets(terms)| Worst Vio  |Nr nets(terms)|
++----------------+--------------+------------+--------------+
+|   max_cap      |    0 (0)     |   0.000    |    0 (0)     |
+|   max_tran     |    0 (0)     |   0.000    |    0 (0)     |
+|   max_fanout   |    0 (0)     |     0      |    0 (0)     |
++----------------+--------------+------------+--------------+
+
+Density: 75.108%
+Routing Overflow: 0.00% H and 0.28% V
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 1.56 sec
+Total Real time: 2.0 sec
+Total Memory Usage: 378.726562 Mbytes
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (SOCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix SYS_TOP_postCTS -outDir timingReports
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+*** Starting trialRoute (mem=378.7M) ***
+
+There are 0 pin guide points passed to trialRoute.
+Options:  -handlePreroute -keepMarkedOptRoutes -noPinGuide
+
+Nr of prerouted/Fixed nets = 0
+routingBox: (0 0) (480940 320940)
+coreBox:    (8200 8200) (472940 312940)
+Number of multi-gpin terms=226, multi-gpins=463, moved blk term=0/97
+
+Phase 1a route (0:00:00.0 378.7M):
+Est net length = 5.246e+04um = 2.912e+04H + 2.335e+04V
+Usage: (15.6%H 16.0%V) = (3.523e+04um 4.307e+04um) = (17100 15006)
+Obstruct: 51 = 0 (0.0%H) + 51 (0.8%V)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+Number obstruct path=18 reroute=0
+
+Phase 1b route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.522e+04um 4.308e+04um) = (17094 15011)
+Overflow: 13 = 0 (0.00% H) + 13 (0.21% V)
+
+Phase 1c route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17040 14992)
+Overflow: 10 = 0 (0.00% H) + 10 (0.15% V)
+
+Phase 1d route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.511e+04um 4.303e+04um) = (17041 14992)
+Overflow: 9 = 0 (0.00% H) + 9 (0.14% V)
+
+Phase 1e route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.512e+04um 4.303e+04um) = (17043 14992)
+Overflow: 7 = 0 (0.00% H) + 7 (0.11% V)
+
+Phase 1f route (0:00:00.0 378.7M):
+Usage: (15.6%H 16.0%V) = (3.513e+04um 4.304e+04um) = (17049 14998)
+Overflow: 2 = 0 (0.00% H) + 2 (0.03% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -1:	0	 0.00%	2	 0.03%
+--------------------------------------
+  0:	0	 0.00%	47	 0.72%
+  1:	0	 0.00%	47	 0.72%
+  2:	0	 0.00%	73	 1.12%
+  3:	0	 0.00%	51	 0.78%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	35	 0.54%
+  6:	3	 0.05%	92	 1.41%
+  7:	233	 3.55%	32	 0.49%
+  8:	27	 0.41%	82	 1.26%
+  9:	175	 2.67%	220	 3.38%
+ 10:	216	 3.30%	475	 7.30%
+ 11:	244	 3.72%	719	11.05%
+ 12:	485	 7.40%	1087	16.71%
+ 13:	806	12.30%	1287	19.79%
+ 14:	1107	16.89%	1084	16.67%
+ 15:	1184	18.06%	1114	17.13%
+ 16:	1074	16.38%	17	 0.26%
+ 17:	686	10.47%	6	 0.09%
+ 18:	309	 4.71%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+Using detail cap. scale factor for clock nets.
+
+*** Memory Usage v0.144 (Current mem = 378.727M, initial mem = 62.238M) ***
+Phase 1l route (0:00:00.2 378.7M):
+
+
+*** After '-updateRemainTrks' operation: 
+
+Usage: (15.9%H 16.2%V) = (3.587e+04um 4.379e+04um) = (17404 15257)
+Overflow: 18 = 0 (0.00% H) + 18 (0.28% V)
+
+Congestion distribution:
+
+Remain	cntH		cntV
+--------------------------------------
+ -3:	0	 0.00%	1	 0.02%
+ -2:	0	 0.00%	1	 0.02%
+ -1:	0	 0.00%	15	 0.23%
+--------------------------------------
+  0:	0	 0.00%	40	 0.62%
+  1:	0	 0.00%	45	 0.69%
+  2:	0	 0.00%	68	 1.05%
+  3:	0	 0.00%	53	 0.81%
+  4:	0	 0.00%	20	 0.31%
+  5:	6	 0.09%	39	 0.60%
+  6:	5	 0.08%	91	 1.40%
+  7:	236	 3.60%	38	 0.58%
+  8:	33	 0.50%	91	 1.40%
+  9:	178	 2.72%	232	 3.57%
+ 10:	227	 3.46%	444	 6.83%
+ 11:	261	 3.98%	733	11.27%
+ 12:	503	 7.67%	1082	16.64%
+ 13:	812	12.39%	1291	19.85%
+ 14:	1099	16.77%	1069	16.44%
+ 15:	1174	17.91%	1115	17.14%
+ 16:	1047	15.97%	16	 0.25%
+ 17:	668	10.19%	6	 0.09%
+ 18:	306	 4.67%	10	 0.15%
+ 20:	0	 0.00%	4	 0.06%
+
+
+
+*** Completed Phase 1 route (0:00:00.3 378.7M) ***
+
+
+Total length: 5.471e+04um, number of vias: 16598
+M1(H) length: 3.223e+00um, number of vias: 8254
+M2(V) length: 2.155e+04um, number of vias: 7434
+M3(H) length: 2.629e+04um, number of vias: 755
+M4(V) length: 4.379e+03um, number of vias: 153
+M5(H) length: 2.475e+03um, number of vias: 2
+M6(V) length: 4.510e+00um, number of vias: 0
+M7(H) length: 0.000e+00um
+*** Completed Phase 2 route (0:00:00.1 378.7M) ***
+
+*** Finished all Phases (cpu=0:00:00.5 mem=378.7M) ***
+Peak Memory Usage was 378.7M 
+*** Finished trialRoute (cpu=0:00:00.5 mem=378.7M) ***
+
+Default RC Extraction called for design SYS_TOP.
+RCMode: Default
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Default RC extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using detail cap. scale factor for clock nets.
+Default RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 378.727M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
+Density: 75.108%
+Routing Overflow: 0.00% H and 0.28% V
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 1.69 sec
+Total Real time: 2.0 sec
+Total Memory Usage: 378.726562 Mbytes
+<CMD> refinePlace -preserveRouting
+Starting refinePlace ...
+Statistics of distance of Instance movement in detailed placement:
+  maximum (X+Y) =         0.00 um
+  mean    (X+Y) =         0.00 um
+Total instances moved : 0
+*** cpu=0:00:00.0   mem=378.7M  mem(used)=0.0M***
+Total net length = 4.375e+04 (2.515e+04 1.860e+04) (ext = 2.225e+03)
+default core: bins with density >  0.75 = 46.3 % ( 25 / 54 )
+<CMD> setNanoRouteMode -routeWithEco true
+<CMD> setNanoRouteMode -droutePostRouteSwapVia true
+#WARNING (NRIF-64) When droutePostRouteSwapVia is NOT set to 'false' or 'none', the tool just does post route via optimization and it will NOT do normal routing.
+<CMD> globalDetailRoute
+
+globalDetailRoute
+
+#Start globalDetailRoute on Tue Oct 29 19:45:35 2024
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 378.00 (Mb)
+Using detail cap. scale factor for clock nets.
+#NanoRoute Version v08.10-p008 NR081027-0018/USR58-UB
+#Merging special wires...
+#Number of eco nets is 0
+#
+#Start data preparation...
+#Auto generating G-grids with size=15 tracks, using layer METAL2's pitch = 0.410.
+#Using automatically generated G-grids.
+#
+#Data preparation is done.
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  Metal 1        H         391           0        1014    79.78%
+#  Metal 2        V         587           0        1014     0.00%
+#  Metal 3        H         391           0        1014     0.00%
+#  Metal 4        V         587           0        1014     0.00%
+#  Metal 5        H         391           0        1014     0.00%
+#  Metal 6        V         587           0        1014     0.00%
+#  Metal 7        H         195           0        1014     0.00%
+#  --------------------------------------------------------------
+#  Total                   3129       0.00%        7098    11.40%
+#
+#
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 378.00 (Mb)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 378.00 (Mb)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#
+#start global routing iteration 3...
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#
+#start global routing iteration 4...
+#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded from the statistics)
+#
+#                 OverCon       OverCon       OverCon          
+#                  #Gcell        #Gcell        #Gcell    %Gcell
+#     Layer           (1)           (2)           (3)   OverCon
+#  ------------------------------------------------------------
+#   Metal 1      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 2     11(1.08%)      7(0.69%)      3(0.30%)   (2.07%)
+#   Metal 3      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 4      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 5      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 6      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#   Metal 7      0(0.00%)      0(0.00%)      0(0.00%)   (0.00%)
+#  ------------------------------------------------------------
+#     Total     11(0.17%)      7(0.11%)      3(0.05%)   (0.32%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 3
+#
+#Complete Global Routing.
+#Total wire length = 57029 um.
+#Total half perimeter of net bounding box = 45018 um.
+#Total wire length on LAYER METAL1 = 437 um.
+#Total wire length on LAYER METAL2 = 19042 um.
+#Total wire length on LAYER METAL3 = 24407 um.
+#Total wire length on LAYER METAL4 = 8563 um.
+#Total wire length on LAYER METAL5 = 4034 um.
+#Total wire length on LAYER METAL6 = 289 um.
+#Total wire length on LAYER METAL7 = 258 um.
+#Total number of vias = 12038
+#Up-Via Summary (total 12038):
+#           
+#-----------------------
+#  Metal 1         6134
+#  Metal 2         4622
+#  Metal 3          962
+#  Metal 4          278
+#  Metal 5           26
+#  Metal 6           16
+#-----------------------
+#                 12038 
+#
+#Max overcon = 3 tracks.
+#Total overcon = 0.32%.
+#Worst layer Gcell overcon rate = 2.07%.
+#Cpu time = 00:00:06
+#Elapsed time = 00:00:07
+#Increased memory = 0.00 (Mb)
+#Total memory = 378.00 (Mb)
+#Peak memory = 410.00 (Mb)
+#WARNING (NRDR-128) Can not do via swapping using command 'globalDetailRoute', use 'detailRoute' command instead . Will do normal detail routing if possible.
+#
+#Start Detail Routing.
+#start initial detail routing ...
+# ECO: 0.0% of the total area was rechecked for DRC, and 100.0% required routing.
+#    number of violations = 15
+#cpu time = 00:00:12, elapsed time = 00:00:13, memory = 378.00 (Mb)
+#start 1st optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 2nd optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 378.00 (Mb)
+#start 3rd optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 378.00 (Mb)
+#start 4th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 378.00 (Mb)
+#start 5th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 378.00 (Mb)
+#start 6th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 7th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 8th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 9th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 10th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 11th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 12th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 13th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:00, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 14th optimization iteration ...
+#    number of violations = 3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#start 15th optimization iteration ...
+#    number of violations = 0
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 378.00 (Mb)
+#Complete Detail Routing.
+#Total wire length = 55331 um.
+#Total half perimeter of net bounding box = 45018 um.
+#Total wire length on LAYER METAL1 = 2028 um.
+#Total wire length on LAYER METAL2 = 19445 um.
+#Total wire length on LAYER METAL3 = 24681 um.
+#Total wire length on LAYER METAL4 = 6179 um.
+#Total wire length on LAYER METAL5 = 2710 um.
+#Total wire length on LAYER METAL6 = 134 um.
+#Total wire length on LAYER METAL7 = 153 um.
+#Total number of vias = 18572
+#Up-Via Summary (total 18572):
+#           
+#-----------------------
+#  Metal 1         8404
+#  Metal 2         8492
+#  Metal 3         1424
+#  Metal 4          223
+#  Metal 5           18
+#  Metal 6           11
+#-----------------------
+#                 18572 
+#
+#Total number of DRC violations = 0
+#Total number of violations on LAYER METAL1 = 0
+#Total number of violations on LAYER METAL2 = 0
+#Total number of violations on LAYER METAL3 = 0
+#Total number of violations on LAYER METAL4 = 0
+#Total number of violations on LAYER METAL5 = 0
+#Total number of violations on LAYER METAL6 = 0
+#Total number of violations on LAYER METAL7 = 0
+#
+#start routing for process antenna violation fix ...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 389.00 (Mb)
+#
+#Total wire length = 55331 um.
+#Total half perimeter of net bounding box = 45018 um.
+#Total wire length on LAYER METAL1 = 2028 um.
+#Total wire length on LAYER METAL2 = 19445 um.
+#Total wire length on LAYER METAL3 = 24681 um.
+#Total wire length on LAYER METAL4 = 6179 um.
+#Total wire length on LAYER METAL5 = 2710 um.
+#Total wire length on LAYER METAL6 = 134 um.
+#Total wire length on LAYER METAL7 = 153 um.
+#Total number of vias = 18572
+#Up-Via Summary (total 18572):
+#           
+#-----------------------
+#  Metal 1         8404
+#  Metal 2         8492
+#  Metal 3         1424
+#  Metal 4          223
+#  Metal 5           18
+#  Metal 6           11
+#-----------------------
+#                 18572 
+#
+#Total number of DRC violations = 0
+#Total number of net violated process antenna rule = 0
+#Total number of violations on LAYER METAL1 = 0
+#Total number of violations on LAYER METAL2 = 0
+#Total number of violations on LAYER METAL3 = 0
+#Total number of violations on LAYER METAL4 = 0
+#Total number of violations on LAYER METAL5 = 0
+#Total number of violations on LAYER METAL6 = 0
+#Total number of violations on LAYER METAL7 = 0
+#
+#detailRoute Statistics:
+#Cpu time = 00:00:19
+#Elapsed time = 00:00:23
+#Increased memory = 11.00 (Mb)
+#Total memory = 389.00 (Mb)
+#Peak memory = 410.00 (Mb)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:00:27
+#Elapsed time = 00:00:32
+#Increased memory = 108.00 (Mb)
+#Total memory = 389.00 (Mb)
+#Peak memory = 410.00 (Mb)
+#Number of warnings = 1
+#Total number of warnings = 3
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Tue Oct 29 19:46:07 2024
+#
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (SOCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+Detail RC Extraction called for design SYS_TOP.
+Process corner(s) are loaded.
+Loading corner...  /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl
+extractDetailRC Option : -outfile ./SYS_TOP_4AF5Nr_15618.rcdb.d 
+RC Mode: Detail [Extended CapTable, RC Table Resistances]
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 389.7M)
+Creating parasitic data file './SYS_TOP_4AF5Nr_15618.rcdb.d/SYS_TOP.rcdb.gz' for storing RC.
+Write RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+Extracted 10.007% (CPU Time= 0:00:00.1  MEM= 389.7M)
+Extracted 20.0077% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 30.0083% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 40.009% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 50.0096% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 60.0102% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 70.0109% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 80.0115% (CPU Time= 0:00:00.3  MEM= 389.7M)
+Extracted 90.0122% (CPU Time= 0:00:00.3  MEM= 389.7M)
+Extracted 100% (CPU Time= 0:00:00.4  MEM= 389.7M)
+Nr. Extracted Resistors     : 34191
+Nr. Extracted Ground Cap.   : 36236
+Nr. Extracted Coupling Cap. : 0
+Detail RC Extraction DONE (CPU Time: 0:00:00.4  Real Time: 0:00:02.0  MEM: 389.730M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
++----------------+---------------------------+--------------+
+|                |            Real           |     Total    |
+|    DRVs        +--------------+------------+--------------|
+|                |Nr nets(terms)| Worst Vio  |Nr nets(terms)|
++----------------+--------------+------------+--------------+
+|   max_cap      |    0 (0)     |   0.000    |    0 (0)     |
+|   max_tran     |    0 (0)     |   0.000    |    0 (0)     |
+|   max_fanout   |    0 (0)     |     0      |    0 (0)     |
++----------------+--------------+------------+--------------+
+
+Density: 75.108%
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 1.84 sec
+Total Real time: 3.0 sec
+Total Memory Usage: 389.730469 Mbytes
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (SOCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+Detail RC Extraction called for design SYS_TOP.
+Process corner(s) are loaded.
+Loading corner...  /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl
+extractDetailRC Option : -outfile ./SYS_TOP_4AF5Nr_15618.rcdb.d -maxResLength 200 
+RC Mode: Detail [Extended CapTable, RC Table Resistances]
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 389.7M)
+Creating parasitic data file './SYS_TOP_4AF5Nr_15618.rcdb.d/SYS_TOP.rcdb.gz' for storing RC.
+Write RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+Extracted 10.007% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 20.0077% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 30.0083% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 40.009% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 50.0096% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 60.0102% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 70.0109% (CPU Time= 0:00:00.2  MEM= 389.7M)
+Extracted 80.0115% (CPU Time= 0:00:00.3  MEM= 389.7M)
+Extracted 90.0122% (CPU Time= 0:00:00.3  MEM= 389.7M)
+Extracted 100% (CPU Time= 0:00:00.3  MEM= 389.7M)
+Nr. Extracted Resistors     : 34191
+Nr. Extracted Ground Cap.   : 36236
+Nr. Extracted Coupling Cap. : 0
+Detail RC Extraction DONE (CPU Time: 0:00:00.4  Real Time: 0:00:01.0  MEM: 389.730M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
+Density: 75.108%
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 1.9 sec
+Total Real time: 3.0 sec
+Total Memory Usage: 389.730469 Mbytes
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 389.7) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+VG: elapsed time: 3.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:02.5  MEM: 31.2M)
+
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Tue Oct 29 19:51:42 2024
+
+Design Name: SYS_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (240.4700, 160.4700)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net SI[3]: Found a geometry with bounding box (-0.10,120.10) (0.10,120.30) outside design boundary.
+Violations for such geometries will be reported.
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Tue Oct 29 19:51:43 2024
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.3  MEM: 0.000M)
+
+<CMD> saveDesign /home/ahesham/Projects/System_pnr/pnr/SYS_TOP.enc
+Redoing specifyClockTree  -file Clock.ctstch  ...
+Writing Netlist "/home/ahesham/Projects/System_pnr/pnr/SYS_TOP.enc.dat/SYS_TOP.v" ...
+Saving clock tree spec file '/home/ahesham/Projects/System_pnr/pnr/SYS_TOP.enc.dat/SYS_TOP.ctstch' ...
+Saving configuration ...
+Saving preference file /home/ahesham/Projects/System_pnr/pnr/SYS_TOP.enc.dat/enc.pref.tcl ...
+Saving SI fix option to '/home/ahesham/Projects/System_pnr/pnr/SYS_TOP.enc.dat/siFix.option'...
+Saving floorplan ...
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+Saving placement ...
+*** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=400.9M) ***
+Saving route ...
+*** Completed saveRoute (cpu=0:00:00.1 real=0:00:00.0 mem=400.9M) ***
+*** Completed saveYieldMap (cpu=: 0:00:00.0 real=0:00:00.0 mem=: 0.000M) ***
+Creating constraint file...
+<CMD> verifyProcessAntenna -reportfile SYS_TOP.antenna.rpt -leffile SYS_TOP.antenna.lef -error 1000
+
+******* START VERIFY ANTENNA ********
+Report File: SYS_TOP.antenna.rpt
+LEF Macro File: SYS_TOP.antenna.lef
+Verification Complete: 0 Violations
+******* DONE VERIFY ANTENNA ********
+(CPU Time: 0:00:00.4  MEM: 0.000M)
+
+<CMD> addFiller -cell {FILL1M FILL2M FILL4M FILL8M FILL16M FILL32M FILL64M} -prefix FILLER -markFixed
+**WARN: (SOCSP-9057):	Fillers being added in a FIXED mode to the whole design. Some subsequent
+operations, such as antenna fixing, may fail due to fillers being marked
+as 'FIXED'. If this was not intended, use deleteFiller command to undo.
+*INFO:   Added 5 filler insts (cell FILL64M / prefix FILLER).
+*INFO:   Added 47 filler insts (cell FILL32M / prefix FILLER).
+*INFO:   Added 46 filler insts (cell FILL16M / prefix FILLER).
+*INFO:   Added 179 filler insts (cell FILL8M / prefix FILLER).
+*INFO:   Added 455 filler insts (cell FILL4M / prefix FILLER).
+*INFO:   Added 513 filler insts (cell FILL2M / prefix FILLER).
+*INFO:   Added 629 filler insts (cell FILL1M / prefix FILLER).
+*INFO: Total 1874 filler insts added - prefix FILLER (CPU: 0:00:00.1).
+*INFO: Checking for DRC violations on added fillers.
+*INFO: Iteration 0-#1, Found 0 DRC violation  (CPU: 0:00:00.8).
+*INFO:   Added 0 filler inst  (cell FILL1M / prefix FILLER).
+*INFO: Checking for DRC violations on added fillers.
+*INFO: Iteration 0-#1, Found 0 DRC violation  (CPU: 0:00:00.7).
+*INFO: End DRC Checks. (CPU: 0:00:01.5 MEM: 1.0M).
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference allM4Cont -isVisible 0
+<CMD> setLayerPreference allM4Cont -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 401.9) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+VG: elapsed time: 3.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:02.8  MEM: 25.3M)
+
+<CMD> setLayerPreference allM0 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM2 -isVisible 0
+<CMD> setLayerPreference allM3 -isVisible 0
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> setLayerPreference allM5 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM7 -isVisible 0
+<CMD> setLayerPreference allM1Cont -isVisible 0
+<CMD> setLayerPreference allM2Cont -isVisible 0
+<CMD> setLayerPreference allM3Cont -isVisible 0
+<CMD> setLayerPreference allM4Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM6Cont -isVisible 0
+<CMD> setLayerPreference allM7Cont -isVisible 0
+<CMD> setLayerPreference allM0 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM2 -isVisible 1
+<CMD> setLayerPreference allM3 -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM5 -isVisible 1
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> setLayerPreference allM7 -isVisible 1
+<CMD> setLayerPreference allM1Cont -isVisible 1
+<CMD> setLayerPreference allM2Cont -isVisible 1
+<CMD> setLayerPreference allM3Cont -isVisible 1
+<CMD> setLayerPreference allM4Cont -isVisible 1
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> setLayerPreference allM6Cont -isVisible 1
+<CMD> setLayerPreference allM7Cont -isVisible 1
+<CMD> setLayerPreference allM0 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM2 -isVisible 0
+<CMD> setLayerPreference allM3 -isVisible 0
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> setLayerPreference allM5 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM7 -isVisible 0
+<CMD> setLayerPreference allM1Cont -isVisible 0
+<CMD> setLayerPreference allM2Cont -isVisible 0
+<CMD> setLayerPreference allM3Cont -isVisible 0
+<CMD> setLayerPreference allM4Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM6Cont -isVisible 0
+<CMD> setLayerPreference allM7Cont -isVisible 0
+<CMD> setLayerPreference allM0 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM2 -isVisible 1
+<CMD> setLayerPreference allM3 -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM5 -isVisible 1
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> setLayerPreference allM7 -isVisible 1
+<CMD> setLayerPreference allM1Cont -isVisible 1
+<CMD> setLayerPreference allM2Cont -isVisible 1
+<CMD> setLayerPreference allM3Cont -isVisible 1
+<CMD> setLayerPreference allM4Cont -isVisible 1
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> setLayerPreference allM6Cont -isVisible 1
+<CMD> setLayerPreference allM7Cont -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference allM0 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM2 -isVisible 0
+<CMD> setLayerPreference allM3 -isVisible 0
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> setLayerPreference allM5 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM7 -isVisible 0
+<CMD> setLayerPreference allM1Cont -isVisible 0
+<CMD> setLayerPreference allM2Cont -isVisible 0
+<CMD> setLayerPreference allM3Cont -isVisible 0
+<CMD> setLayerPreference allM4Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM6Cont -isVisible 0
+<CMD> setLayerPreference allM7Cont -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference allM0 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM2 -isVisible 1
+<CMD> setLayerPreference allM3 -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM5 -isVisible 1
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> setLayerPreference allM7 -isVisible 1
+<CMD> setLayerPreference allM1Cont -isVisible 1
+<CMD> setLayerPreference allM2Cont -isVisible 1
+<CMD> setLayerPreference allM3Cont -isVisible 1
+<CMD> setLayerPreference allM4Cont -isVisible 1
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> setLayerPreference allM6Cont -isVisible 1
+<CMD> setLayerPreference allM7Cont -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference allM0 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM2 -isVisible 0
+<CMD> setLayerPreference allM3 -isVisible 0
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> setLayerPreference allM5 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM7 -isVisible 0
+<CMD> setLayerPreference allM1Cont -isVisible 0
+<CMD> setLayerPreference allM2Cont -isVisible 0
+<CMD> setLayerPreference allM3Cont -isVisible 0
+<CMD> setLayerPreference allM4Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM6Cont -isVisible 0
+<CMD> setLayerPreference allM7Cont -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference allM0 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM2 -isVisible 1
+<CMD> setLayerPreference allM3 -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM5 -isVisible 1
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> setLayerPreference allM7 -isVisible 1
+<CMD> setLayerPreference allM1Cont -isVisible 1
+<CMD> setLayerPreference allM2Cont -isVisible 1
+<CMD> setLayerPreference allM3Cont -isVisible 1
+<CMD> setLayerPreference allM4Cont -isVisible 1
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> setLayerPreference allM6Cont -isVisible 1
+<CMD> setLayerPreference allM7Cont -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference allM0 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM2 -isVisible 0
+<CMD> setLayerPreference allM3 -isVisible 0
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> setLayerPreference allM5 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM7 -isVisible 0
+<CMD> setLayerPreference allM1Cont -isVisible 0
+<CMD> setLayerPreference allM2Cont -isVisible 0
+<CMD> setLayerPreference allM3Cont -isVisible 0
+<CMD> setLayerPreference allM4Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM6Cont -isVisible 0
+<CMD> setLayerPreference allM7Cont -isVisible 0
+<CMD> setLayerPreference allM0 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM2 -isVisible 1
+<CMD> setLayerPreference allM3 -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM5 -isVisible 1
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> setLayerPreference allM7 -isVisible 1
+<CMD> setLayerPreference allM1Cont -isVisible 1
+<CMD> setLayerPreference allM2Cont -isVisible 1
+<CMD> setLayerPreference allM3Cont -isVisible 1
+<CMD> setLayerPreference allM4Cont -isVisible 1
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> setLayerPreference allM6Cont -isVisible 1
+<CMD> setLayerPreference allM7Cont -isVisible 1
+<CMD> verifyGeometry -noMinArea
+ *** Starting Verify Geometry (MEM: 401.9) ***
+
+  VERIFY GEOMETRY ...... Starting Verification
+  VERIFY GEOMETRY ...... Initializing
+  VERIFY GEOMETRY ...... Deleting Existing Violations
+  VERIFY GEOMETRY ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY GEOMETRY ...... SubArea : 1 of 1
+  VERIFY GEOMETRY ...... Cells          :  0 Viols.
+  VERIFY GEOMETRY ...... SameNet        :  0 Viols.
+  VERIFY GEOMETRY ...... Wiring         :  0 Viols.
+  VERIFY GEOMETRY ...... Antenna        :  0 Viols.
+  VERIFY GEOMETRY ...... Sub-Area : 1 complete 0 Viols. 0 Wrngs.
+VG: elapsed time: 4.00
+Begin Summary ...
+  Cells       : 0
+  SameNet     : 0
+  Wiring      : 0
+  Antenna     : 0
+  Short       : 0
+  Overlap     : 0
+End Summary
+
+  Verification Complete : 0 Viols.  0 Wrngs.
+
+**********End: VERIFY GEOMETRY**********
+ *** verify geometry (CPU: 0:00:02.8  MEM: 25.3M)
+
+<CMD> verifyConnectivity -type all -noAntenna -error 1000 -warning 50
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Tue Oct 29 20:45:17 2024
+
+Design Name: SYS_TOP
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (240.4700, 160.4700)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net SI[3]: Found a geometry with bounding box (-0.10,120.10) (0.10,120.30) outside design boundary.
+Violations for such geometries will be reported.
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Tue Oct 29 20:45:17 2024
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.4  MEM: 0.000M)
+
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (SOCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+Detail RC Extraction called for design SYS_TOP.
+Process corner(s) are loaded.
+Loading corner...  /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl
+extractDetailRC Option : -outfile ./SYS_TOP_4AF5Nr_15618.rcdb.d -maxResLength 200 
+RC Mode: Detail [Extended CapTable, RC Table Resistances]
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 401.9M)
+Creating parasitic data file './SYS_TOP_4AF5Nr_15618.rcdb.d/SYS_TOP.rcdb.gz' for storing RC.
+Write RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+Extracted 10.007% (CPU Time= 0:00:00.1  MEM= 401.9M)
+Extracted 20.0077% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 30.0083% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 40.009% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 50.0096% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 60.0102% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 70.0109% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 80.0115% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 90.0122% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 100% (CPU Time= 0:00:00.3  MEM= 401.9M)
+Nr. Extracted Resistors     : 34191
+Nr. Extracted Ground Cap.   : 36236
+Nr. Extracted Coupling Cap. : 0
+Detail RC Extraction DONE (CPU Time: 0:00:00.3  Real Time: 0:00:01.0  MEM: 401.863M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
++----------------+---------------------------+--------------+
+|                |            Real           |     Total    |
+|    DRVs        +--------------+------------+--------------|
+|                |Nr nets(terms)| Worst Vio  |Nr nets(terms)|
++----------------+--------------+------------+--------------+
+|   max_cap      |    0 (0)     |   0.000    |    0 (0)     |
+|   max_tran     |    0 (0)     |   0.000    |    0 (0)     |
+|   max_fanout   |    0 (0)     |     0      |    0 (0)     |
++----------------+--------------+------------+--------------+
+
+Density: 100.000%
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 1.99 sec
+Total Real time: 3.0 sec
+Total Memory Usage: 401.863281 Mbytes
+<CMD> clearClockDomains
+<CMD> setClockDomains -all
+setClockDomains -all 
+**WARN: (SOCSYC-1873):	The setClockDomains -all option is unsupported in CTE mode 
+<CMD> timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix SYS_TOP_postRoute -outDir timingReports
+-engine default                        # enums={feDC signalStorm default}, default=default, user setting
+-signOff false                         # bool, default=false
+Detail RC Extraction called for design SYS_TOP.
+Process corner(s) are loaded.
+Loading corner...  /home/ahesham/Projects/System_pnr/std_cells/captables/tsmc13fsg.capTbl
+extractDetailRC Option : -outfile ./SYS_TOP_4AF5Nr_15618.rcdb.d -maxResLength 200 
+RC Mode: Detail [Extended CapTable, RC Table Resistances]
+Capacitance Scaling Factor   : 1.00000
+Coupling Cap. Scaling Factor : 1.00000
+Resistance Scaling Factor    : 1.00000
+Shrink Factor                : 1.00000
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 401.9M)
+Creating parasitic data file './SYS_TOP_4AF5Nr_15618.rcdb.d/SYS_TOP.rcdb.gz' for storing RC.
+Write RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+Extracted 10.007% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 20.0077% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 30.0083% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 40.009% (CPU Time= 0:00:00.2  MEM= 401.9M)
+Extracted 50.0096% (CPU Time= 0:00:00.3  MEM= 401.9M)
+Extracted 60.0102% (CPU Time= 0:00:00.3  MEM= 401.9M)
+Extracted 70.0109% (CPU Time= 0:00:00.3  MEM= 401.9M)
+Extracted 80.0115% (CPU Time= 0:00:00.3  MEM= 401.9M)
+Extracted 90.0122% (CPU Time= 0:00:00.3  MEM= 401.9M)
+Extracted 100% (CPU Time= 0:00:00.4  MEM= 401.9M)
+Nr. Extracted Resistors     : 34191
+Nr. Extracted Ground Cap.   : 36236
+Nr. Extracted Coupling Cap. : 0
+Detail RC Extraction DONE (CPU Time: 0:00:00.5  Real Time: 0:00:02.0  MEM: 401.863M)
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
++--------------------+---------+---------+---------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | in2reg  | reg2out | in2out  | clkgate |
++--------------------+---------+---------+---------+---------+---------+---------+
+|           WNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|           TNS (ns):|  0.000  |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|    Violating Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
+|          All Paths:|    0    |   N/A   |   N/A   |   N/A   |   N/A   |   N/A   |
++--------------------+---------+---------+---------+---------+---------+---------+
+
+Density: 100.000%
+------------------------------------------------------------
+Reported timing to dir timingReports
+Total CPU time: 1.98 sec
+Total Real time: 4.0 sec
+Total Memory Usage: 401.863281 Mbytes
+<CMD> saveDesign /home/ahesham/Projects/System_pnr/pnr/SYS_TOP_chip.enc
+Redoing specifyClockTree  -file Clock.ctstch  ...
+Writing Netlist "/home/ahesham/Projects/System_pnr/pnr/SYS_TOP_chip.enc.dat/SYS_TOP.v" ...
+Saving clock tree spec file '/home/ahesham/Projects/System_pnr/pnr/SYS_TOP_chip.enc.dat/SYS_TOP.ctstch' ...
+Saving configuration ...
+Saving preference file /home/ahesham/Projects/System_pnr/pnr/SYS_TOP_chip.enc.dat/enc.pref.tcl ...
+Saving SI fix option to '/home/ahesham/Projects/System_pnr/pnr/SYS_TOP_chip.enc.dat/siFix.option'...
+Saving floorplan ...
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+Saving placement ...
+*** Completed savePlace (cpu=0:00:00.0 real=0:00:00.0 mem=401.9M) ***
+Saving route ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=401.9M) ***
+*** Completed saveYieldMap (cpu=: 0:00:00.0 real=0:00:00.0 mem=: 0.000M) ***
+Creating constraint file...
+<CMD> saveNetlist export/SYS_TOP.v
+Writing Netlist "export/SYS_TOP.v" ...
+<CMD> saveNetlist export/SYS_TOP_pg.v -includePowerGround
+Writing Netlist "export/SYS_TOP_pg.v" ...
+**WARN: (SOCVL-516):	No Power/Ground connections in top module (SYS_TOP).
+Pwr name (VDD).
+Gnd name (VSS).
+1 Pwr names and 1 Gnd names.
+Creating all pg connections for top cell (SYS_TOP).
+<CMD> rcOut -spf export/SYS_TOP.spf
+Opening parasitic data file './SYS_TOP_4AF5Nr_15618.rcdb.d' for reading.
+Read RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+RC Out has the following PVT Info:
+   RC-typical 
+Printing *|NET...
+Detail RC Out Completed (CPU Time= 0:00:00.5  MEM= 401.9M)
+Closing parasitic data file './SYS_TOP_4AF5Nr_15618.rcdb.d'. 2052 times net's RC data read were performed.
+<CMD> delayCal -sdf export/SYS_TOP.sdf -version 3.0
+**ERROR: (SOCSYUTIL-96):	Cannot open (for read) Timing Constraint file: "/home/ahesham/Projects/System_pnr/DFT/sdc/SYS_TOP.sdc".
+Reason for error: No such file or directory.
+**ERROR: (SOCCTE-8):	CTE TimingGraph Initialization Failed due to previous errors. This may cause CTE not reporting any paths. Check the logfile for the errors and fix them.
+delayCal Option :  -sdf export/SYS_TOP.sdf -version 3.0 
+delayCal Mode   : 'setDelayCalMode -engine default -signOff false -ecsmType ecsmOnDemand'
+Topological Sorting (CPU = 0:00:00.0, MEM = 401.9M)
+Number of Loop : 0
+Start delay calculation (mem=401.863M)...
+*** Calculating scaling factor for max libraries using the default operating condition of each library.
+delayCal using detail RC...
+Handling High Fanin Net......
+Handling 0 High Fanin Net (CPU = 0:00:00.0) 
+
+Printing SDF File.....
+Delay calculation completed.
+(0:00:00.6 401.867M 0)
+
+
+Delay Calculation Summary:
+   Number of nets with pin count greater than 100  : 0
+   Number of nets using excludenet file            : 0
+   Number of nets using set_resistance             : 0
+   Number of nets using default delay              : 0
+   CPU Time (0:00:00.7)
+<CMD> report_power -outfile report/power.rpt
+Calculate delays in BcWc mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 401.9M)
+Number of Loop : 0
+Start delay calculation (mem=401.863M)...
+delayCal using detail RC...
+Delay calculation completed.
+(0:00:00.4 401.863M 0)
+*** CDM Built up (cpu=0:00:00.6  mem= 401.9M) ***
+Set Default Frequency 100MHz.
+Start force assigning power rail voltages for view default_view_setup
+Finished assigning power rail voltages
+
+CPE found ground net: VSS
+CPE found power net: VDD  voltage: 1.08V
+
+Propagating signal activity...
+
+
+Starting Levelizing
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT)
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 5%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 10%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 15%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 20%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 25%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 30%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 35%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 40%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 45%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 50%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 55%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 60%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 65%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 70%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 75%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 80%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 85%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 90%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 95%
+
+Finished Levelizing
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT)
+
+Starting Activity Propagation
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT)
+INFO (POWER-1356):   No default input activity has been set.  Defaulting to 0.2.
+
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 5%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 10%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 15%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 20%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 25%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 30%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 35%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 40%
+2024-Oct-29 20:51:14 (2024-Oct-29 18:51:14 GMT): 45%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 50%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 55%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 60%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 65%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 70%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 75%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 80%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 85%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 90%
+
+Finished Activity Propagation
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT)
+WARNING (POWER-1500): 2 cell(s) in the design have timing library models but
+do not have internal power data.  Internal power will not be calculated for these cells:
+
+  TIEHIM
+  TIELOM
+WARNING (POWER-1501): 2 cell(s) in the design have timing library models but
+do not have leakage power data.  Leakage power will not be calculated for these cells:
+
+  TIEHIM
+  TIELOM
+
+Starting Calculating power
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT)
+
+Calculating power dissipation...
+
+ ... Calculating switching power
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 5%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 10%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 15%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 20%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 25%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 30%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 35%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 40%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 45%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 50%
+ ... Calculating internal and leakage power
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 55%
+2024-Oct-29 20:51:15 (2024-Oct-29 18:51:15 GMT): 60%
+2024-Oct-29 20:51:16 (2024-Oct-29 18:51:16 GMT): 65%
+2024-Oct-29 20:51:16 (2024-Oct-29 18:51:16 GMT): 70%
+2024-Oct-29 20:51:16 (2024-Oct-29 18:51:16 GMT): 75%
+2024-Oct-29 20:51:16 (2024-Oct-29 18:51:16 GMT): 80%
+2024-Oct-29 20:51:17 (2024-Oct-29 18:51:17 GMT): 85%
+2024-Oct-29 20:51:17 (2024-Oct-29 18:51:17 GMT): 90%
+2024-Oct-29 20:51:18 (2024-Oct-29 18:51:18 GMT): 95%
+
+Finished Calculating power
+2024-Oct-29 20:51:18 (2024-Oct-29 18:51:18 GMT)
+report_power consumed time 00:00:05 : increased peak memory (580M) by 0
+Output file is report/power.rpt.
+<CMD> streamOut export/SYS_TOP.gds -mapFile ./import/gds2InLayer.map -libName DesignLib -stripes 1 -units 2000 -mode ALL
+Parse map file...
+Writing GDSII file ...
+	****** db unit per micron = 2000 ******
+	****** output gds2 file unit per micron = 2000 ******
+	****** unit scaling factor = 1 ******
+Output for instance
+Output for bump
+Output for tile
+Output for physical terminals
+Output for logical terminals
+Output for regular nets
+Output for special nets and metal fills
+Output for via structure generation
+Statistics for GDS generated (version 3)
+----------------------------------------
+Stream Out Layer Mapping Information:
+GDS Layer Number          GDS Layer Name
+----------------------------------------
+    136                             COMP
+    1                             METAL1
+    2                             METAL1
+    3                             METAL1
+    4                             METAL1
+    7                             METAL1
+    5                             METAL1
+    6                             METAL1
+    8                             METAL1
+    9                             METAL1
+    10                            METAL1
+    15                             VIA12
+    18                             VIA12
+    16                             VIA12
+    17                             VIA12
+    19                             VIA12
+    20                             VIA12
+    21                            METAL2
+    22                            METAL2
+    23                            METAL2
+    24                            METAL2
+    27                            METAL2
+    25                            METAL2
+    26                            METAL2
+    28                            METAL2
+    29                            METAL2
+    30                            METAL2
+    35                             VIA23
+    38                             VIA23
+    36                             VIA23
+    37                             VIA23
+    39                             VIA23
+    40                             VIA23
+    41                            METAL3
+    42                            METAL3
+    43                            METAL3
+    44                            METAL3
+    47                            METAL3
+    45                            METAL3
+    46                            METAL3
+    48                            METAL3
+    49                            METAL3
+    50                            METAL3
+    55                             VIA34
+    58                             VIA34
+    56                             VIA34
+    57                             VIA34
+    59                             VIA34
+    60                             VIA34
+    61                            METAL4
+    62                            METAL4
+    63                            METAL4
+    64                            METAL4
+    67                            METAL4
+    65                            METAL4
+    66                            METAL4
+    68                            METAL4
+    69                            METAL4
+    70                            METAL4
+    75                             VIA45
+    78                             VIA45
+    76                             VIA45
+    77                             VIA45
+    79                             VIA45
+    80                             VIA45
+    81                            METAL5
+    82                            METAL5
+    83                            METAL5
+    84                            METAL5
+    87                            METAL5
+    85                            METAL5
+    86                            METAL5
+    88                            METAL5
+    89                            METAL5
+    90                            METAL5
+    95                             VIA56
+    98                             VIA56
+    96                             VIA56
+    97                             VIA56
+    99                             VIA56
+    100                            VIA56
+    101                           METAL6
+    102                           METAL6
+    103                           METAL6
+    104                           METAL6
+    107                           METAL6
+    105                           METAL6
+    106                           METAL6
+    108                           METAL6
+    109                           METAL6
+    110                           METAL6
+    115                            VIA67
+    118                            VIA67
+    116                            VIA67
+    117                            VIA67
+    119                            VIA67
+    120                            VIA67
+    121                           METAL7
+    122                           METAL7
+    123                           METAL7
+    124                           METAL7
+    127                           METAL7
+    125                           METAL7
+    126                           METAL7
+    128                           METAL7
+    129                           METAL7
+    130                           METAL7
+    11                            METAL1
+    12                            METAL1
+    13                            METAL1
+    14                            METAL1
+    31                            METAL2
+    32                            METAL2
+    33                            METAL2
+    34                            METAL2
+    51                            METAL3
+    52                            METAL3
+    53                            METAL3
+    54                            METAL3
+    71                            METAL4
+    72                            METAL4
+    73                            METAL4
+    74                            METAL4
+    91                            METAL5
+    92                            METAL5
+    93                            METAL5
+    94                            METAL5
+    111                           METAL6
+    112                           METAL6
+    113                           METAL6
+    114                           METAL6
+    131                           METAL7
+    132                           METAL7
+    133                           METAL7
+    134                           METAL7
+
+
+Stream Out Information Processed for GDS version 3:
+Units: 2000 DBU
+
+Object                             Count
+----------------------------------------
+Instances                           3805
+
+Ports/Pins                            19
+    metal layer METAL2                12
+    metal layer METAL3                 7
+
+Nets                               15619
+    metal layer METAL1              1330
+    metal layer METAL2              8041
+    metal layer METAL3              5291
+    metal layer METAL4               815
+    metal layer METAL5               126
+    metal layer METAL6                10
+    metal layer METAL7                 6
+
+    Via Instances                  18572
+
+Special Nets                         176
+    metal layer METAL1               162
+    metal layer METAL5                 4
+    metal layer METAL6                10
+
+    Via Instances                   1370
+
+Metal Fills                            0
+
+    Via Instances                      0
+
+Metal FillOPCs                         0
+
+    Via Instances                      0
+
+Text                                2068
+    metal layer METAL1               413
+    metal layer METAL2              1022
+    metal layer METAL3               580
+    metal layer METAL4                49
+    metal layer METAL5                 4
+
+
+Blockages                              0
+
+
+Custom Text                            0
+
+
+Custom Box                             0
+
+######Streamout is finished!
+<CMD> checkFiller -highlight true
+*INFO: Total number of gaps found: 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isSelectable 0
+<CMD> setLayerPreference stdCell -isSelectable 0
+<CMD> setLayerPreference phyCell -isSelectable 0
+<CMD> setLayerPreference coverCell -isSelectable 0
+<CMD> setLayerPreference block -isSelectable 0
+<CMD> setLayerPreference pg -isSelectable 0
+<CMD> setLayerPreference layerBlk -isSelectable 0
+<CMD> setLayerPreference obstruct -isSelectable 0
+<CMD> setLayerPreference cellBlkgObj -isSelectable 0
+<CMD> setLayerPreference pinObj -isSelectable 0
+<CMD> setLayerPreference layoutObj -isSelectable 0
+<CMD> setLayerPreference stdRow -isSelectable 0
+<CMD> setLayerPreference metalFill -isSelectable 0
+<CMD> setLayerPreference violation -isSelectable 0
+<CMD> setLayerPreference net -isSelectable 0
+<CMD> setLayerPreference power -isSelectable 0
+<CMD> setLayerPreference implant0 -isSelectable 0
+<CMD> setLayerPreference implant1 -isSelectable 0
+<CMD> setLayerPreference busguide -isSelectable 0
+<CMD> setLayerPreference inst -isSelectable 1
+<CMD> setLayerPreference stdCell -isSelectable 1
+<CMD> setLayerPreference phyCell -isSelectable 1
+<CMD> setLayerPreference coverCell -isSelectable 1
+<CMD> setLayerPreference block -isSelectable 1
+<CMD> setLayerPreference pg -isSelectable 1
+<CMD> setLayerPreference layerBlk -isSelectable 1
+<CMD> setLayerPreference obstruct -isSelectable 1
+<CMD> setLayerPreference cellBlkgObj -isSelectable 1
+<CMD> setLayerPreference pinObj -isSelectable 1
+<CMD> setLayerPreference layoutObj -isSelectable 1
+<CMD> setLayerPreference stdRow -isSelectable 1
+<CMD> setLayerPreference metalFill -isSelectable 1
+<CMD> setLayerPreference violation -isSelectable 1
+<CMD> setLayerPreference net -isSelectable 1
+<CMD> setLayerPreference power -isSelectable 1
+<CMD> setLayerPreference implant0 -isSelectable 1
+<CMD> setLayerPreference implant1 -isSelectable 1
+<CMD> setLayerPreference busguide -isSelectable 1
+<CMD> setLayerPreference inst -isSelectable 0
+<CMD> setLayerPreference stdCell -isSelectable 0
+<CMD> setLayerPreference phyCell -isSelectable 0
+<CMD> setLayerPreference coverCell -isSelectable 0
+<CMD> setLayerPreference block -isSelectable 0
+<CMD> setLayerPreference pg -isSelectable 0
+<CMD> setLayerPreference layerBlk -isSelectable 0
+<CMD> setLayerPreference obstruct -isSelectable 0
+<CMD> setLayerPreference cellBlkgObj -isSelectable 0
+<CMD> setLayerPreference pinObj -isSelectable 0
+<CMD> setLayerPreference layoutObj -isSelectable 0
+<CMD> setLayerPreference stdRow -isSelectable 0
+<CMD> setLayerPreference metalFill -isSelectable 0
+<CMD> setLayerPreference violation -isSelectable 0
+<CMD> setLayerPreference net -isSelectable 0
+<CMD> setLayerPreference power -isSelectable 0
+<CMD> setLayerPreference implant0 -isSelectable 0
+<CMD> setLayerPreference implant1 -isSelectable 0
+<CMD> setLayerPreference busguide -isSelectable 0
+<CMD> setLayerPreference inst -isSelectable 1
+<CMD> setLayerPreference stdCell -isSelectable 1
+<CMD> setLayerPreference phyCell -isSelectable 1
+<CMD> setLayerPreference coverCell -isSelectable 1
+<CMD> setLayerPreference block -isSelectable 1
+<CMD> setLayerPreference pg -isSelectable 1
+<CMD> setLayerPreference layerBlk -isSelectable 1
+<CMD> setLayerPreference obstruct -isSelectable 1
+<CMD> setLayerPreference cellBlkgObj -isSelectable 1
+<CMD> setLayerPreference pinObj -isSelectable 1
+<CMD> setLayerPreference layoutObj -isSelectable 1
+<CMD> setLayerPreference stdRow -isSelectable 1
+<CMD> setLayerPreference metalFill -isSelectable 1
+<CMD> setLayerPreference violation -isSelectable 1
+<CMD> setLayerPreference net -isSelectable 1
+<CMD> setLayerPreference power -isSelectable 1
+<CMD> setLayerPreference implant0 -isSelectable 1
+<CMD> setLayerPreference implant1 -isSelectable 1
+<CMD> setLayerPreference busguide -isSelectable 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isSelectable 0
+<CMD> setLayerPreference stdCell -isSelectable 0
+<CMD> setLayerPreference phyCell -isSelectable 0
+<CMD> setLayerPreference coverCell -isSelectable 0
+<CMD> setLayerPreference block -isSelectable 0
+<CMD> setLayerPreference pg -isSelectable 0
+<CMD> setLayerPreference layerBlk -isSelectable 0
+<CMD> setLayerPreference obstruct -isSelectable 0
+<CMD> setLayerPreference cellBlkgObj -isSelectable 0
+<CMD> setLayerPreference pinObj -isSelectable 0
+<CMD> setLayerPreference layoutObj -isSelectable 0
+<CMD> setLayerPreference stdRow -isSelectable 0
+<CMD> setLayerPreference metalFill -isSelectable 0
+<CMD> setLayerPreference violation -isSelectable 0
+<CMD> setLayerPreference net -isSelectable 0
+<CMD> setLayerPreference power -isSelectable 0
+<CMD> setLayerPreference implant0 -isSelectable 0
+<CMD> setLayerPreference implant1 -isSelectable 0
+<CMD> setLayerPreference busguide -isSelectable 0
+<CMD> setLayerPreference inst -isSelectable 1
+<CMD> setLayerPreference stdCell -isSelectable 1
+<CMD> setLayerPreference phyCell -isSelectable 1
+<CMD> setLayerPreference coverCell -isSelectable 1
+<CMD> setLayerPreference block -isSelectable 1
+<CMD> setLayerPreference pg -isSelectable 1
+<CMD> setLayerPreference layerBlk -isSelectable 1
+<CMD> setLayerPreference obstruct -isSelectable 1
+<CMD> setLayerPreference cellBlkgObj -isSelectable 1
+<CMD> setLayerPreference pinObj -isSelectable 1
+<CMD> setLayerPreference layoutObj -isSelectable 1
+<CMD> setLayerPreference stdRow -isSelectable 1
+<CMD> setLayerPreference metalFill -isSelectable 1
+<CMD> setLayerPreference violation -isSelectable 1
+<CMD> setLayerPreference net -isSelectable 1
+<CMD> setLayerPreference power -isSelectable 1
+<CMD> setLayerPreference implant0 -isSelectable 1
+<CMD> setLayerPreference implant1 -isSelectable 1
+<CMD> setLayerPreference busguide -isSelectable 1
+<CMD> setLayerPreference inst -isSelectable 0
+<CMD> setLayerPreference stdCell -isSelectable 0
+<CMD> setLayerPreference phyCell -isSelectable 0
+<CMD> setLayerPreference coverCell -isSelectable 0
+<CMD> setLayerPreference block -isSelectable 0
+<CMD> setLayerPreference pg -isSelectable 0
+<CMD> setLayerPreference layerBlk -isSelectable 0
+<CMD> setLayerPreference obstruct -isSelectable 0
+<CMD> setLayerPreference cellBlkgObj -isSelectable 0
+<CMD> setLayerPreference pinObj -isSelectable 0
+<CMD> setLayerPreference layoutObj -isSelectable 0
+<CMD> setLayerPreference stdRow -isSelectable 0
+<CMD> setLayerPreference metalFill -isSelectable 0
+<CMD> setLayerPreference violation -isSelectable 0
+<CMD> setLayerPreference net -isSelectable 0
+<CMD> setLayerPreference power -isSelectable 0
+<CMD> setLayerPreference implant0 -isSelectable 0
+<CMD> setLayerPreference implant1 -isSelectable 0
+<CMD> setLayerPreference busguide -isSelectable 0
+<CMD> setLayerPreference inst -isSelectable 1
+<CMD> setLayerPreference stdCell -isSelectable 1
+<CMD> setLayerPreference phyCell -isSelectable 1
+<CMD> setLayerPreference coverCell -isSelectable 1
+<CMD> setLayerPreference block -isSelectable 1
+<CMD> setLayerPreference pg -isSelectable 1
+<CMD> setLayerPreference layerBlk -isSelectable 1
+<CMD> setLayerPreference obstruct -isSelectable 1
+<CMD> setLayerPreference cellBlkgObj -isSelectable 1
+<CMD> setLayerPreference pinObj -isSelectable 1
+<CMD> setLayerPreference layoutObj -isSelectable 1
+<CMD> setLayerPreference stdRow -isSelectable 1
+<CMD> setLayerPreference metalFill -isSelectable 1
+<CMD> setLayerPreference violation -isSelectable 1
+<CMD> setLayerPreference net -isSelectable 1
+<CMD> setLayerPreference power -isSelectable 1
+<CMD> setLayerPreference implant0 -isSelectable 1
+<CMD> setLayerPreference implant1 -isSelectable 1
+<CMD> setLayerPreference busguide -isSelectable 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setMetalFill -layer 1 -windowSize 200.000 200.000 -windowStep 100.000 100.000 -minDensity 20.000 -maxDensity 80.000
+<CMD> setMetalFill -layer 2 -windowSize 200.000 200.000 -windowStep 100.000 100.000 -minDensity 20.000 -maxDensity 80.000
+<CMD> setMetalFill -layer 3 -windowSize 200.000 200.000 -windowStep 100.000 100.000 -minDensity 20.000 -maxDensity 80.000
+<CMD> setMetalFill -layer 4 -windowSize 200.000 200.000 -windowStep 100.000 100.000 -minDensity 20.000 -maxDensity 80.000
+<CMD> setMetalFill -layer 5 -windowSize 200.000 200.000 -windowStep 100.000 100.000 -minDensity 20.000 -maxDensity 80.000
+<CMD> setMetalFill -layer 6 -windowSize 200.000 200.000 -windowStep 100.000 100.000 -minDensity 20.000 -maxDensity 80.000
+<CMD> setMetalFill -layer 7 -windowSize 200.000 200.000 -windowStep 100.000 100.000 -minDensity 20.000 -maxDensity 80.000
+<CMD> verifyMetalDensity -reportfile SYS_TOP.density.rpt
+
+******** Start: VERIFY DENSITY ********
+**WARN: (SOCVMD-44):	area box height is less than window size for layer "M1".
+**WARN: (SOCVMD-45):	window size and window step are changed to area box height."M1".
+**WARN: (SOCVMD-44):	area box height is less than window size for layer "M2".
+**WARN: (SOCVMD-45):	window size and window step are changed to area box height."M2".
+**WARN: (SOCVMD-44):	area box height is less than window size for layer "M3".
+**WARN: (SOCVMD-45):	window size and window step are changed to area box height."M3".
+**WARN: (SOCVMD-44):	area box height is less than window size for layer "M4".
+**WARN: (SOCVMD-45):	window size and window step are changed to area box height."M4".
+**WARN: (SOCVMD-44):	area box height is less than window size for layer "M5".
+**WARN: (SOCVMD-45):	window size and window step are changed to area box height."M5".
+**WARN: (SOCVMD-44):	area box height is less than window size for layer "M6".
+**WARN: (SOCVMD-45):	window size and window step are changed to area box height."M6".
+**WARN: (SOCVMD-44):	area box height is less than window size for layer "M7".
+**WARN: (SOCVMD-45):	window size and window step are changed to area box height."M7".
+*******
+
+A total of 12 density violation(s).
+Windows < Min. Density = 12
+Windows > Max. Density = 0
+
+******** End: VERIFY DENSITY ********
+ (CPU Time: 0:00:02.3  MEM: 0.000M)
+
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> zoomBox -7.447 164.588 55.641 106.994
+<CMD> zoomBox -3.690 161.760 15.066 147.333
+<CMD> selectMarker 0.0000 0.0000 200.0000 160.4700 7 6 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference allM0 -isVisible 0
+<CMD> setLayerPreference allM1 -isVisible 0
+<CMD> setLayerPreference allM2 -isVisible 0
+<CMD> setLayerPreference allM3 -isVisible 0
+<CMD> setLayerPreference allM4 -isVisible 0
+<CMD> setLayerPreference allM5 -isVisible 0
+<CMD> setLayerPreference allM6 -isVisible 0
+<CMD> setLayerPreference allM7 -isVisible 0
+<CMD> setLayerPreference allM1Cont -isVisible 0
+<CMD> setLayerPreference allM2Cont -isVisible 0
+<CMD> setLayerPreference allM3Cont -isVisible 0
+<CMD> setLayerPreference allM4Cont -isVisible 0
+<CMD> setLayerPreference allM5Cont -isVisible 0
+<CMD> setLayerPreference allM6Cont -isVisible 0
+<CMD> setLayerPreference allM7Cont -isVisible 0
+<CMD> setLayerPreference allM0 -isVisible 1
+<CMD> setLayerPreference allM1 -isVisible 1
+<CMD> setLayerPreference allM2 -isVisible 1
+<CMD> setLayerPreference allM3 -isVisible 1
+<CMD> setLayerPreference allM4 -isVisible 1
+<CMD> setLayerPreference allM5 -isVisible 1
+<CMD> setLayerPreference allM6 -isVisible 1
+<CMD> setLayerPreference allM7 -isVisible 1
+<CMD> setLayerPreference allM1Cont -isVisible 1
+<CMD> setLayerPreference allM2Cont -isVisible 1
+<CMD> setLayerPreference allM3Cont -isVisible 1
+<CMD> setLayerPreference allM4Cont -isVisible 1
+<CMD> setLayerPreference allM5Cont -isVisible 1
+<CMD> setLayerPreference allM6Cont -isVisible 1
+<CMD> setLayerPreference allM7Cont -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference phyCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference pg -isVisible 0
+<CMD> setLayerPreference layerBlk -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference cellBlkgObj -isVisible 0
+<CMD> setLayerPreference pinObj -isVisible 0
+<CMD> setLayerPreference layoutObj -isVisible 0
+<CMD> setLayerPreference stdRow -isVisible 0
+<CMD> setLayerPreference metalFill -isVisible 0
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference implant0 -isVisible 0
+<CMD> setLayerPreference implant1 -isVisible 0
+<CMD> setLayerPreference busguide -isVisible 0
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference phyCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference pg -isVisible 1
+<CMD> setLayerPreference layerBlk -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference cellBlkgObj -isVisible 1
+<CMD> setLayerPreference pinObj -isVisible 1
+<CMD> setLayerPreference layoutObj -isVisible 1
+<CMD> setLayerPreference stdRow -isVisible 1
+<CMD> setLayerPreference metalFill -isVisible 1
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference implant0 -isVisible 1
+<CMD> setLayerPreference implant1 -isVisible 1
+<CMD> setLayerPreference busguide -isVisible 1
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference violation -isVisible 1
+<CMD> setLayerPreference violation -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+<CMD> setLayerPreference hinst -isVisible 1
+<CMD> setLayerPreference fence -isVisible 1
+<CMD> setLayerPreference guide -isVisible 1
+<CMD> setLayerPreference obstruct -isVisible 1
+<CMD> setLayerPreference region -isVisible 1
+<CMD> setLayerPreference screen -isVisible 1
+<CMD> setLayerPreference inst -isVisible 1
+<CMD> setLayerPreference stdCell -isVisible 1
+<CMD> setLayerPreference coverCell -isVisible 1
+<CMD> setLayerPreference block -isVisible 1
+<CMD> setLayerPreference io -isVisible 1
+<CMD> setLayerPreference areaIo -isVisible 1
+<CMD> setLayerPreference net -isVisible 1
+<CMD> setLayerPreference power -isVisible 1
+<CMD> setLayerPreference term -isVisible 1
+<CMD> setLayerPreference ruler -isVisible 1
+<CMD> setLayerPreference text -isVisible 1
+<CMD> setLayerPreference relFPlan -isVisible 1
+<CMD> setLayerPreference yieldCell -isVisible 1
+<CMD> setLayerPreference yieldMap -isVisible 1
+<CMD> setLayerPreference sdpConnect -isVisible 1
+<CMD> setLayerPreference densityMap -isVisible 1
+<CMD> setLayerPreference hinst -isSelectable 0
+<CMD> setLayerPreference fence -isSelectable 0
+<CMD> setLayerPreference guide -isSelectable 0
+<CMD> setLayerPreference obstruct -isSelectable 0
+<CMD> setLayerPreference region -isSelectable 0
+<CMD> setLayerPreference screen -isSelectable 0
+<CMD> setLayerPreference inst -isSelectable 0
+<CMD> setLayerPreference stdCell -isSelectable 0
+<CMD> setLayerPreference coverCell -isSelectable 0
+<CMD> setLayerPreference block -isSelectable 0
+<CMD> setLayerPreference io -isSelectable 0
+<CMD> setLayerPreference areaIo -isSelectable 0
+<CMD> setLayerPreference net -isSelectable 0
+<CMD> setLayerPreference power -isSelectable 0
+<CMD> setLayerPreference term -isSelectable 0
+<CMD> setLayerPreference ruler -isSelectable 0
+<CMD> setLayerPreference text -isSelectable 0
+<CMD> setLayerPreference relFPlan -isSelectable 0
+<CMD> setLayerPreference yieldCell -isSelectable 0
+<CMD> setLayerPreference yieldMap -isSelectable 0
+<CMD> setLayerPreference sdpConnect -isSelectable 0
+<CMD> setLayerPreference densityMap -isSelectable 0
+<CMD> setLayerPreference hinst -isSelectable 1
+<CMD> setLayerPreference fence -isSelectable 1
+<CMD> setLayerPreference guide -isSelectable 1
+<CMD> setLayerPreference obstruct -isSelectable 1
+<CMD> setLayerPreference region -isSelectable 1
+<CMD> setLayerPreference screen -isSelectable 1
+<CMD> setLayerPreference inst -isSelectable 1
+<CMD> setLayerPreference stdCell -isSelectable 1
+<CMD> setLayerPreference coverCell -isSelectable 1
+<CMD> setLayerPreference block -isSelectable 1
+<CMD> setLayerPreference io -isSelectable 1
+<CMD> setLayerPreference areaIo -isSelectable 1
+<CMD> setLayerPreference net -isSelectable 1
+<CMD> setLayerPreference power -isSelectable 1
+<CMD> setLayerPreference term -isSelectable 1
+<CMD> setLayerPreference ruler -isSelectable 1
+<CMD> setLayerPreference text -isSelectable 1
+<CMD> setLayerPreference relFPlan -isSelectable 1
+<CMD> setLayerPreference yieldCell -isSelectable 1
+<CMD> setLayerPreference yieldMap -isSelectable 1
+<CMD> setLayerPreference sdpConnect -isSelectable 1
+<CMD> setLayerPreference densityMap -isSelectable 1
+<CMD> setLayerPreference hinst -isVisible 0
+<CMD> setLayerPreference fence -isVisible 0
+<CMD> setLayerPreference guide -isVisible 0
+<CMD> setLayerPreference obstruct -isVisible 0
+<CMD> setLayerPreference region -isVisible 0
+<CMD> setLayerPreference screen -isVisible 0
+<CMD> setLayerPreference inst -isVisible 0
+<CMD> setLayerPreference stdCell -isVisible 0
+<CMD> setLayerPreference coverCell -isVisible 0
+<CMD> setLayerPreference block -isVisible 0
+<CMD> setLayerPreference io -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference net -isVisible 0
+<CMD> setLayerPreference power -isVisible 0
+<CMD> setLayerPreference term -isVisible 0
+<CMD> setLayerPreference ruler -isVisible 0
+<CMD> setLayerPreference text -isVisible 0
+<CMD> setLayerPreference relFPlan -isVisible 0
+<CMD> setLayerPreference yieldCell -isVisible 0
+<CMD> setLayerPreference yieldMap -isVisible 0
+<CMD> setLayerPreference sdpConnect -isVisible 0
+<CMD> setLayerPreference densityMap -isVisible 0
+
+*** Memory Usage v0.144 (Current mem = 401.863M, initial mem = 62.238M) ***
+--- Ending "First Encounter" (totcpu=0:14:22, real=2:14:02, mem=401.9M) ---

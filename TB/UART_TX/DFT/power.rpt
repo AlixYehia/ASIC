@@ -1,0 +1,50 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : UART_TX
+Version: K-2015.06
+Date   : Sun Oct 20 03:17:13 2024
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/System/UART/UART_TX/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+UART_TX                tsmc13_wl30       scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+UART_TX                                2.22e-04 8.72e-05 1.07e+06 1.38e-03 100.0
+  U0_MUX (UART_TX_MUX)                 7.28e-06 5.35e-07 2.22e+04 3.00e-05   2.2
+  U0_parity_Calc (UART_TX_parity_Calc_test_1)
+                                       1.61e-05 2.23e-05 3.28e+05 3.67e-04  26.6
+  U0_FSM (UART_TX_FSM_test_1)          2.03e-05 1.03e-05 1.72e+05 2.03e-04  14.7
+  U0_serializer (UART_TX_serializer_test_1)
+                                       6.34e-05 4.82e-05 4.75e+05 5.86e-04  42.5
+  U1_mux2X1 (mux2X1_1)                 5.79e-06 2.60e-07 2.11e+04 2.71e-05   2.0
+  U0_mux2X1 (mux2X1_0)                 1.07e-04 5.15e-06 2.11e+04 1.33e-04   9.7
+1

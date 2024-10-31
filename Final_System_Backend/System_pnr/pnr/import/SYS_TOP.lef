@@ -1,0 +1,183 @@
+
+#******
+# Preview export LEF
+#
+#	 Preview sub-version 5.10.41.500.3.38
+#
+# TECH LIB NAME: tsmc18
+# TECH FILE NAME: techfile.cds
+#******
+
+VERSION 5.4 ;
+
+NAMESCASESENSITIVE ON ;
+
+DIVIDERCHAR "|" ;
+BUSBITCHARS "[]" ;
+
+UNITS
+    DATABASE MICRONS 100  ;
+END UNITS
+
+MACRO SYS_TOP
+    CLASS CORE ;
+    FOREIGN SYS_TOP 0 0 ;
+    ORIGIN 0.00 0.00 ;
+    SIZE 240.6 BY 180.6 ;
+    SYMMETRY X Y ;
+    PIN SI[0]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 150 0.2 150.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END SI[0]
+    PIN SI[1]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 140 0.2 140.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END SI[1]
+    PIN SI[2]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 130 0.2 130.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END SI[2]
+    PIN SI[3]
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 120 0.2 120.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END SI[3]
+    PIN SE
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 110 0.2 110.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END SE
+    PIN test_mode
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 100 0.2 100.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END test_mode
+    PIN scan_clk
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 90 0.2 90.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END scan_clk
+    PIN scan_rst
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 80 0.2 80.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END scan_rst
+    PIN RST_N
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 70 0.2 70.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END RST_N
+    PIN UART_CLK
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 60 0.2 60.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END UART_CLK
+    PIN REF_CLK
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 50 0.2 50.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END REF_CLK
+    PIN UART_RX_IN
+        DIRECTION INPUT ;
+        PORT
+        LAYER METAL2 ;
+        RECT  0.00 40 0.2 40.2 ;
+        END
+	AntennaGateArea 0.0 ;
+    END UART_RX_IN
+    PIN SO[0]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  240.47 140 240.67 140.2 ; 
+        END
+	AntennaDiffArea 0.575 ;
+    END SO[0]
+    PIN SO[1]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  240.47 120 240.67 120.2 ; 
+        END
+	AntennaDiffArea 0.575 ;
+    END SO[1]
+    PIN SO[2]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  240.47 100 240.67 100.2 ; 
+        END
+	AntennaDiffArea 0.575 ;
+    END SO[2]
+    PIN SO[3]
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  240.47 80 240.67 80.2 ; 
+        END
+	AntennaDiffArea 0.575 ;
+    END SO[3]
+    PIN UART_TX_O
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  240.47 60 240.67 60.2 ; 
+        END
+	AntennaDiffArea 0.575 ;
+    END UART_TX_O
+    PIN parity_error
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  240.47 40 240.67 40.2 ; 
+        END
+	AntennaDiffArea 0.575 ;
+    END parity_error
+    PIN framing_error
+        DIRECTION OUTPUT ;
+        PORT
+        LAYER METAL3 ;
+        RECT  240.47 20 240.67 20.2 ; 
+        END
+	AntennaDiffArea 0.575 ;
+    END framing_error
+END SYS_TOP
+
+END LIBRARY
+

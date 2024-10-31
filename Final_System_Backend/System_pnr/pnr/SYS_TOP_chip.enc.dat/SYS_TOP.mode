@@ -1,0 +1,13 @@
+setAnalysisMode -checkType setup -clkSrcPath true -clockPropagation sdcControl -cts postCTS -skew true -virtualIPO false
+setTrialRouteMode -handlePreroute true -keepMarkedOptRoutes true
+setOptMode -drcMargin 0 -effort high -fixDrc true -route noPreserve -rPlace true -setupTargetSlack 0
+setExtractRCMode  -engine detail -coupled false -force true -viaCap true
+setDelayCalMode -engine default
+setNanoRouteMode -quiet -droutePostRouteSwapVia "true"
+setNanoRouteMode -quiet -drouteStartIteration 0
+setNanoRouteMode -quiet -routeSiEffort "low"
+setNanoRouteMode -quiet -routeWithEco true
+setNanoRouteMode -quiet -routeWithSiDriven false
+setNanoRouteMode -quiet -routeWithTimingDriven false
+
+setPlaceMode -ignoreScan true -timingDriven true -useNP true -WLHighEffort false

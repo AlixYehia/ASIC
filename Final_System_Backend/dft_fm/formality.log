@@ -1,0 +1,24 @@
+Info:  Net Ref:/WORK/SYS_TOP_DFT/SO[3] is undriven.
+Info:  Net Ref:/WORK/SYS_TOP_DFT/SO[2] is undriven.
+Info:  Net Ref:/WORK/SYS_TOP_DFT/SO[1] is undriven.
+Info:  Net Ref:/WORK/SYS_TOP_DFT/SO[0] is undriven.
+Info:  Net Ref:/WORK/SYS_TOP_DFT/U0_CLK_GATE.test_en is undriven.
+Info:  Net Ref:/WORK/CLK_GATE/test_mode is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[7] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[6] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[5] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[4] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[3] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[2] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[1] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/remainder[0] is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW_div_uns_0/divide_by_0 is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW01_sub_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW01_add_0/CO is undriven.
+Info:  Net Imp:/WORK/ALU_16B_DW01_add_1/CO is undriven.
+Info:  guide_uniquify 109 (Line: 875)  Cannot find object "U1_Integer_Clock_Divider_RX/U10" in design 'SYS_TOP_DFT'.
+Info:  SVF Operation 109 (Line: 875) - uniquify.  Status: rejected
+Info:  guide_uniquify 109 (Line: 875)  Cannot find object "U0_Integer_Clock_Divider_TX/U10" in design 'SYS_TOP_DFT'.
+Info:  guide_uniquify 117 (Line: 922)  Cannot find object "U0_ALU_16B/dp_cluster_0/mult_56" in design 'SYS_TOP_DFT'.
+Info:  Pre-verification of Ref:/WORK/ALU_16B/div_60 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/ALU_16B/mult_56 SUCCEEDED.

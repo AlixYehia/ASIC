@@ -1,0 +1,83 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : UART_TX
+Version: K-2015.06
+Date   : Sun Oct 20 03:17:13 2024
+****************************************
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   RST_M (dont_touch)           1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U1_mux2X1/U1/Y
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/ser_done_reg/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[7]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/counter_reg[0]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[6]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[5]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[4]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[3]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[2]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[1]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/counter_reg[3]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/counter_reg[2]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/counter_reg[1]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/parallel_data_reg[0]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_serializer/S_DATA_reg/SN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_FSM/current_state_reg[1]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_FSM/current_state_reg[0]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_FSM/current_state_reg[2]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[7]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[6]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[5]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[4]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[3]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[2]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[1]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+       PIN :   U0_parity_Calc/parallel_data_reg[0]/RN
+                                1.50           2.91          -1.41  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1                  -1.41  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   RST_M (dont_touch)           0.55           0.87          -0.32  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1                  -0.32  
+
+1
