@@ -13,7 +13,7 @@ It is responsible of receiving commands through UART receiver to do different sy
 # **Supported Commands**
 - Register File Write.
   
-![image](assets/System20Top/Register%20File%20Write.png)
+![image](assets/System%20Top/Register%20File%20Write.png)
 
 - Register file read.
 
@@ -22,7 +22,7 @@ It is responsible of receiving commands through UART receiver to do different sy
 
 - ALU operation with input operands.
 
-![image](assets/System%20Top/ALU%20Operation%w20ith%20Operands.png)
+![image](assets/System%20Top/ALU%20Operation%20with%20Operands.png)
 
 
 - ALU operation with previous operands.
