@@ -3,7 +3,7 @@ It is responsible of receiving commands through UART receiver to do different sy
 
 # **Block Diagram**
 
-![image]("assets/System%Top.png")
+![image]("assets/System Top.png")
 
 # **System Specifications** 
 - Reference clock (REF_CLK) is 50 MHz.
