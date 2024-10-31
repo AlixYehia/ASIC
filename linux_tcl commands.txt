@@ -14,4 +14,4 @@
 
  # : used for comments in tcl
 
-cd "Digital IC/IC Temsah/my homework/Assignment 6/Tcl" use forward slash
+cd "Digital IC/Tcl" use forward slash
