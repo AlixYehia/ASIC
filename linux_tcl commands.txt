@@ -1,0 +1,17 @@
+ pwd : print working directory
+ 
+ cd : change directory
+ 
+ cd .. : go back one time
+ 
+ cd ../.. : go back two times etc.
+ 
+ cd "desired directory"/"desired inside folder"
+
+ " source "file" "  when I run the program it wont tell me where is the line that contains the error so instead use "tclsh"
+ 
+ cls : to clear terminal 
+
+ # : used for comments in tcl
+
+cd "Digital IC/IC Temsah/my homework/Assignment 6/Tcl" use forward slash
