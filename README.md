@@ -13,11 +13,11 @@ It is responsible of receiving commands through UART receiver to do different sy
 # **Supported Commands**
 - Register File Write.
   
-![image](assets/System%Top/Refister%20File%20Write.png)
+![image](assets/System20Top/Register%20File%20Write.png)
 
 - Register file read.
 
-![image](assets/System%20Top/Refister%20File%20Read.png)
+![image](assets/System%20Top/Register%20File%20Read.png)
 
 
 - ALU operation with input operands.
