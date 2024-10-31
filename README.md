@@ -17,12 +17,12 @@ It is responsible of receiving commands through UART receiver to do different sy
 
 - Register file read.
 
-![image](assets/System%Top/Refister%20File%20Read.png)
+![image](assets/System%20Top/Refister%20File%20Read.png)
 
 
 - ALU operation with input operands.
 
-![image](assets/System%Top/ALU%Operation%with%Operands.png)
+![image](assets/System%20Top/ALU%20Operation%w20ith%20Operands.png)
 
 
 - ALU operation with previous operands.
