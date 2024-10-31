@@ -27,7 +27,7 @@ It is responsible of receiving commands through UART receiver to do different sy
 
 - ALU operation with previous operands.
 
-![image](assets/System%Top/ALU Operation%With%Previous%Operands%Stored.png)
+![image](assets/System%20Top/ALU Operation%20With%20Previous%20Operands%20Stored.png)
 
 
 ## Documentation
