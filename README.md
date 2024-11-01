@@ -31,5 +31,4 @@ It is responsible for receiving commands through UART receiver to do different s
 
 
 ## Documentation
-For detailed documentation, please refer to the PDF [RTL to GDS Implementation of Low Power Configurable Multi Clock Digital System](https://drive.google.com/file/d/1L8MiV9wmf6REgvUpTxTX128k_zSQsYQ7/view?usp=drive_link).
-Or Word document for better figures quality [RTL to GDS Implementation of Low Power Configurable Multi Clock Digital System](https://docs.google.com/document/d/1Ylm-aajCjcjzB_0i4UEJ2K69dNYYSwHI/edit?usp=drive_link&ouid=104931728493082077503&rtpof=true&sd=true)
+For detailed documentation, please refer to the PDF version, [RTL to GDS Implementation of Low Power Configurable Multi Clock Digital System](https://drive.google.com/file/d/1L8MiV9wmf6REgvUpTxTX128k_zSQsYQ7/view?usp=drive_link), or the Word document for higher-quality figures, available [here](https://docs.google.com/document/d/1Ylm-aajCjcjzB_0i4UEJ2K69dNYYSwHI/edit?usp=drive_link&ouid=104931728493082077503&rtpof=true&sd=true)
