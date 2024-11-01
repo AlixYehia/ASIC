@@ -14,4 +14,4 @@
 
  # : used for comments in tcl
 
-cd "Digital IC/Tcl" use forward slash
+cd "Digital IC/Tcl" use forward slash when writting path (windows uses backward)
