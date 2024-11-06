@@ -1,5 +1,5 @@
 # **Description:** 
-It is responsible of receiving commands through UART receiver to do different system functions as register file reading/writing or doing some processing using ALU block and send result to UART transmitter through asynchronous FIFO for handling different clock rates and avoid data loss.
+It is responsible for receiving commands through UART receiver to do different system functions as register file reading/writing or doing some processing using ALU block and send result to UART transmitter through asynchronous FIFO for handling different clock rates and avoid data loss.
 
 # **Block Diagram**
 
@@ -31,4 +31,4 @@ It is responsible of receiving commands through UART receiver to do different sy
 
 
 ## Documentation
-For detailed documentation, please refer to the [RTL to GDS Implementation of Low Power Configurable Multi Clock Digital System](https://drive.google.com/file/d/1L8MiV9wmf6REgvUpTxTX128k_zSQsYQ7/view?usp=drive_link).
+For detailed documentation, please refer to the PDF version, [RTL to GDS Implementation of Low Power Configurable Multi Clock Digital System](https://drive.google.com/file/d/1L8MiV9wmf6REgvUpTxTX128k_zSQsYQ7/view?usp=drive_link), or the Word document for higher-quality figures, available [here](https://drive.google.com/uc?export=download&id=1Ylm-aajCjcjzB_0i4UEJ2K69dNYYSwHI).
