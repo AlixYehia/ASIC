@@ -5,7 +5,7 @@ set top_module SYS_TOP
 
 
 
-lappend search_path /home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys
+lappend search_path /home/IC/lib/aci/sc-m/synopsys
 
 lappend search_path /home/IC/Projects/System/syn
 
@@ -29,9 +29,9 @@ lappend search_path /home/IC/Projects/System/RTL/SYS_TOP
 ####################### Read Reference tech libs ########################
  
 
-set SSLIB "/home/IC/lib/aci/sc-m/synopsys/scmetro_ff_library.db"
-set TTLIB "/home/IC/lib/aci/sc-m/synopsys/scmetro_tt_library.db"
-set FFLIB "/home/IC/lib/aci/sc-m/synopsys/scmetro_ff_library.db"
+set SSLIB "/home/IC/lib/aci/sc-m/synopsys/ss_library.db"
+set TTLIB "/home/IC/lib/aci/sc-m/synopsys/tt_library.db"
+set FFLIB "/home/IC/lib/aci/sc-m/synopsys/ff_library.db"
 
 
 ######################### Formality Setup File ###########################
