@@ -164,7 +164,7 @@ set_load 0.5 [get_port SO]
 # Define the Worst Library for Max(#setup) analysis
 # Define the Best Library for Min(hold) analysis
 
-set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
+set_operating_conditions -max ff_library -max_library ff_library -min ss_library -min_library ss_library
 
 ####################################################################################
            #########################################################
@@ -172,7 +172,7 @@ set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -m
            #########################################################
 ####################################################################################
 
-#set_wire_load_model -name tsmc13_wl30 -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+#set_wire_load_model -name w20 -library ff_library
 
 ####################################################################################
            #########################################################
