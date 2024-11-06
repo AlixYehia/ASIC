@@ -35,9 +35,9 @@ lappend search_path /home/IC/Projects/System/RTL/UART/UART_TX
 lappend search_path /home/IC/Projects/System/RTL/UART/UART
 lappend search_path /home/IC/Projects/System/RTL/SYS_TOP_DFT
 
-set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
-set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
-set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+set SSLIB "ss_library.db"
+set TTLIB "tt_library.db"
+set FFLIB "ff_library.db"
 
 ## Standard Cell libraries 
 set target_library [list $SSLIB $TTLIB $FFLIB]

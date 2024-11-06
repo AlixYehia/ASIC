@@ -20,7 +20,7 @@ puts "###########################################"
 #Add the path of the libraries and RTL files to the search_path variable
 
 set PROJECT_PATH /home/IC/Projects/System/
-set LIB_PATH     /home/IC/tsmc_fb_cl013g_sc/aci/sc-m
+set LIB_PATH     /home/IC/lib/aci/sc-m
 
 lappend search_path /home/IC/Projects/System/std_cells
 lappend search_path $LIB_PATH/synopsys
@@ -39,9 +39,9 @@ lappend search_path $PROJECT_PATH/RTL/UART/UART_TX
 lappend search_path $PROJECT_PATH/RTL/UART/UART
 lappend search_path $PROJECT_PATH/RTL/SYS_TOP
 
-set SSLIB "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
-set TTLIB "scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
-set FFLIB "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+set SSLIB "ss_library.db"
+set TTLIB "tt_library.db"
+set FFLIB "ff_library.db"
 
 ## Standard Cell libraries 
 set target_library [list $SSLIB $TTLIB $FFLIB]

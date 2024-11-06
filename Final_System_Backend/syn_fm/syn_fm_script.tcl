@@ -29,9 +29,9 @@ lappend search_path /home/IC/Projects/System/RTL/SYS_TOP
 ####################### Read Reference tech libs ########################
  
 
-set SSLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
-set TTLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
-set FFLIB "/home/IC/tsmc_fb_cl013g_sc/aci/sc-m/synopsys/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+set SSLIB "/home/IC/lib/aci/sc-m/synopsys/scmetro_ff_library.db"
+set TTLIB "/home/IC/lib/aci/sc-m/synopsys/scmetro_tt_library.db"
+set FFLIB "/home/IC/lib/aci/sc-m/synopsys/scmetro_ff_library.db"
 
 
 ######################### Formality Setup File ###########################

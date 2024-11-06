@@ -6,14 +6,14 @@
 set sdc_version 2.0
 
 set_units -time ns -resistance kOhm -capacitance pF -voltage V -current mA
-set_operating_conditions -max scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -max_library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -min scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c -min_library scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
-set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports test_mode]
-set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports SE]
-set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[3]}]
-set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[2]}]
-set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[1]}]
-set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports {SI[0]}]
-set_driving_cell -lib_cell BUFX2M -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports UART_RX_IN]
+set_operating_conditions -max ff_library -max_library ff_library -min ss_library -min_library ss_library
+set_driving_cell -lib_cell BUFX2M -library ff_library -pin Y [get_ports test_mode]
+set_driving_cell -lib_cell BUFX2M -library ff_library -pin Y [get_ports SE]
+set_driving_cell -lib_cell BUFX2M -library ff_library -pin Y [get_ports {SI[3]}]
+set_driving_cell -lib_cell BUFX2M -library ff_library -pin Y [get_ports {SI[2]}]
+set_driving_cell -lib_cell BUFX2M -library ff_library -pin Y [get_ports {SI[1]}]
+set_driving_cell -lib_cell BUFX2M -library ff_library -pin Y [get_ports {SI[0]}]
+set_driving_cell -lib_cell BUFX2M -library ff_library -pin Y [get_ports UART_RX_IN]
 set_load -pin_load 0.5 [get_ports {SO[3]}]
 set_load -pin_load 0.5 [get_ports {SO[2]}]
 set_load -pin_load 0.5 [get_ports {SO[1]}]

@@ -139,10 +139,10 @@ set_output_delay $out2_delay -clock $CLK3_NAME [get_port SO]
            #########################################################
 ####################################################################################
 
-set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port UART_RX_IN]
-set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port test_mode]
-set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SI]
-set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_port SE]
+set_driving_cell -library ff_library -lib_cell BUFX2M -pin Y [get_port UART_RX_IN]
+set_driving_cell -library ff_library -lib_cell BUFX2M -pin Y [get_port test_mode]
+set_driving_cell -library ff_library -lib_cell BUFX2M -pin Y [get_port SI]
+set_driving_cell -library ff_library -lib_cell BUFX2M -pin Y [get_port SE]
 
 ####################################################################################
            #########################################################
