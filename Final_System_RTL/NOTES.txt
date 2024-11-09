@@ -2,7 +2,7 @@
 //////////////////////////////////////// Blocking and Non-Blocking /////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-In Testbench when you use blocking assignment (=) to check for a signal at the posedge of the clock, if I may say so, it will be treated as combinational and take the value exactly at the edge while if used Non-Blocking assignment (<=) it will take the value just before the posedge of clock which is our intended case. This can be seen in my Asynchronous FIFO testbench in expected value generation in read_process task. Try to change the Non-blocking to Blocking and examine the result on waveform and transcript.
+In testbench, when you use blocking assignment (=) to check for a signal at the posedge of the clock, it will be treated as combinational and take the value exactly at the edge; while if used Non-Blocking assignment (<=), it will take the value just before the posedge of clock which is our intended case. This can be seen in my Asynchronous FIFO testbench in expected value generation in read_process task. Try to change the Non-blocking to Blocking and examine the result on waveform and transcript.
 
 In summary:
 
